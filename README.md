@@ -16,6 +16,8 @@ dbskill 由 [dontbesilent](https://x.com/dontbesilent) 创建。从 16,152 条�
 
 [快速开始](#快速开始) · [安装](#安装) · [能力一览](#能力一览) · [公开推文集](#公开推文集) · [完整使用手册](docs/新手入门.md) · [更新记录](https://github.com/dontbesilent2025/dbskill/commits/main)
 
+![dbskill 动态编排图](docs/skill-link-map-4x3.svg)
+
 ## dbskill 解决什么问题
 
 你不需要先学会一套复杂的方法，也不需要知道该调用哪个工具。把当下的业务、材料、选择或卡点交给 `/dbs`，它会根据对话上下文判断单个 Skill 是否足够；复杂任务可以编排 1 个主 Skill 和最多 2 个辅助 Skill。
@@ -38,7 +40,7 @@ dbskill 由 [dontbesilent](https://x.com/dontbesilent) 创建。从 16,152 条�
 我需要判断问题出在产品、定价，还是我找错了客户。
 ```
 
-`/dbs` 会读取当前对话信息，说明推荐理由，并生成一段可以直接继续发送的提示词。
+`/dbs` 会读取当前对话信息，说明推荐理由，并生成一段可以直接继续发送的提示词。完成一轮后，继续补充新的事实或反馈，再输入 `/dbs`，它会重新判断当前任务需要单项还是组合。
 
 已经知道需求时，可以直接调用具体 Skill：
 
@@ -69,6 +71,8 @@ dbskill 由 [dontbesilent](https://x.com/dontbesilent) 创建。从 16,152 条�
 | 建立内容资产与多端 Agent 工作台 | `/dbs-content-system`、`/dbs-agent-migration`、`/dbs-install-skill` | 本地工程、主题地图与安装方案 |
 | 把反复问题制作成单个 Skill | `/dbs-skill-maker` | 可安装 Skill、分级验证结果与可选 GitHub 发布仓库 |
 
+完整的 32 个 Skill、适用时机、输入示例和动态导航方式，见 [新手入门与 Skill 全目录](docs/新手入门.md#skill-全目录)。
+
 ## 安装
 
 ### 推荐：Claude Code、豆包、WorkBuddy、Codex 与其他支持 Skills 的 Agent
@@ -81,12 +85,87 @@ npx -y skills add dontbesilent2025/dbskill -g --all
 
 安装后回到 Agent，输入 `/dbs 新手入门` 即可开始。
 
+### Claude Code 插件市场
+
+也可以通过 Claude Code 插件市场安装完整工具箱：
+
+```bash
+claude plugin marketplace add dontbesilent2025/dbskill
+claude plugin install dbs@dontbesilent-skills
+```
+
+这个 `dbs` 插件包含 32 个正式业务 Skill 和 1 个 `dbs-update` 系统更新入口。Claude Code 会为插件 Skill 添加命名空间：主入口使用 `/dbs:dbs`，具体能力例如 `/dbs:dbs-diagnosis`。
+
+只想安装一个能力时，可以在插件市场中选择对应插件，例如 `claude plugin install dbs-diagnosis@dontbesilent-skills`。
+
+![Claude Code 插件安装演示](demo.gif)
+
+### 更新
+
+已安装 dbskill 时，直接对当前 Agent 说：
+
+```text
+更新 dbskill
+```
+
+它会同步官方 dbskill，不会修改你在 `~/.dbs/` 中的存档、报告和决策记录。版本变化见 [提交记录](https://github.com/dontbesilent2025/dbskill/commits/main)。
+
+## dbskill 怎样工作
+
+```text
+真实任务
+   ↓
+/dbs 读取上下文并判断单项或组合
+   ↓
+生成一段可直接继续发送的提示词
+   ↓
+入选 Skill 交付一份统一结果
+   ↓
+补充结果与反馈，再重新编排
+```
+
+dbskill 每次只处理一个当前任务。单个 Skill 能覆盖时保持简单；任务包含独立且必要的要求时，使用主辅组合共同交付一份结果。
+
 ## 知识库与本地记录
 
 仓库公开了 4,176 条结构化知识原子、按 Skill 整理的方法论文档与高频概念词典。
 
+- 想查看数据范围和字段，阅读 [原子库说明](知识库/原子库/README.md)。
+- 想构建自己的 RAG，可使用 `知识库/原子库/atoms.jsonl`。
+- 想了解各项方法，浏览 [Skill 知识包](知识库/Skill知识包)。
+- 想把自己的本地文件夹直接当作知识库，使用 `/dbs-knowledge` 建立导航并持续查找、收录和调用资料。
+- 想跨对话保留工作，使用 `/dbs-save`、`/dbs-restore` 与 `/dbs-report`。数据默认保存在用户本机的 `~/.dbs/`。
+
+## 公开推文集
+
+公开推文集收录经过整理的 dontbesilent 推文原文，提供两种格式：
+
+- [Markdown 阅读版](books/dontbesilent-开源推文集.md)：适合搜索、复制和交给 AI 分析。
+- [PDF 阅读版](books/dontbesilent-开源推文集.pdf)：适合完整阅读和下载保存。
+
+推文集与 Skills 安装包相互独立。执行 `npx -y skills add dontbesilent2025/dbskill -g --all` 时，安装的是 Skills，不会自动下载推文集。
+
+![dbskill 知识来源图](docs/knowledge-pipeline.svg)
+
+## 共同贡献者
+
+`dbs-content-risk-check` 的敏感词检查能力由以下共创者共同完善，他们的贡献不可替代：
+
+- [@Ronnie2025](https://github.com/Ronnie2025)
+- [@非著名投放小沈](https://xhslink.cn/m/4NSBjmZTC1j)
+
+## 作者与支持
+
+作者：[@dontbesilent](https://x.com/dontbesilent) · [小红书](https://xhslink.com/m/637xuspR4iI) · [抖音](https://v.douyin.com/pRUDhpBqOrc/)
+
+如需加入付费答疑群，可扫码或打开 [答疑群说明](https://mp.weixin.qq.com/s/RpwNjMo4M_er4GOrfCYt1g)。
+
+![付费答疑群二维码](docs/paid-qa-group-qrcode.png)
+
 ## 许可证
 
-本项目采用 [CC BY-NC 4.0](LICENSE) 许可证。个人使用、学习、研究与非商业项目可以直接使用；公开发布衍生作品时，请注明来源；商业用途需要单独授权，请联系作者。
+本项目采用 [CC BY-NC 4.0](LICENSE) 许可证。
 
-> 本仓库为 fishlives0u0 保存的个人副本，原始来源：dontbesilent2025/dbskill。
+- 个人使用、学习、研究与非商业项目可以直接使用。
+- 公开发布衍生作品时，请注明来源。
+- 商业用途需要单独授权，请联系作者。

@@ -1,0 +1,53 @@
+%%{init: {
+  "theme": "base",
+  "themeVariables": {
+    "background": "#ffffff",
+    "primaryColor": "#ffffff",
+    "primaryTextColor": "#111111",
+    "primaryBorderColor": "#111111",
+    "lineColor": "#111111",
+    "secondaryColor": "#ffffff",
+    "secondaryTextColor": "#111111",
+    "secondaryBorderColor": "#111111",
+    "tertiaryColor": "#ffffff",
+    "tertiaryTextColor": "#111111",
+    "tertiaryBorderColor": "#111111",
+    "clusterBkg": "#ffffff",
+    "clusterBorder": "#111111",
+    "defaultLinkColor": "#111111",
+    "fontFamily": "Helvetica, Arial, PingFang SC, Microsoft YaHei, sans-serif"
+  },
+  "flowchart": {
+    "htmlLabels": true,
+    "curve": "basis",
+    "nodeSpacing": 32,
+    "rankSpacing": 48
+  }
+}}%%
+
+%% 本文件保留编排逻辑草图；README 中的正式 4:3 图示为手工维护的 skill-link-map-4x3.svg。
+
+block-beta
+    columns 4
+
+    A["真实任务、材料<br/>或新反馈"]
+    B["&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/dbs<br/>主入口&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"]
+    C["判断单 Skill<br/>或主辅组合"]
+    D["生成可直接发送的<br/>任务提示词"]
+
+    space
+    E{"当前任务完成吗？"}:2
+    space
+
+    F["没有完成／有新反馈<br/>回到 /dbs"]
+    G["已经明确下一步<br/>尊重用户选择"]
+    H["已经完成<br/>直接结束"]
+    space
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    E --> G
+    E --> H
