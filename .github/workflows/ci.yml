@@ -1,0 +1,51 @@
+name: Main Integrity Checks
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install pinned Claude Code CLI
+        run: npm install --global @anthropic-ai/claude-code@2.1.158
+
+      - name: Validate marketplace manifest
+        run: |
+          claude plugin validate .
+          python3 tools/check-marketplace-scope.py
+          python3 tools/check-skill-metadata.py
+
+      - name: Verify release version and update contract
+        run: |
+          python3 tools/check-release-versions.py
+          python3 tools/check-plugin-update-contract.py
+          bash tools/test-dbs-update-check.sh
+          bash tools/test-dbs-install-skill.sh
+          bash tools/test-dbs-install-skill-windows-mock.sh
+
+  verify-windows-junctions:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Verify Windows Junction install lifecycle
+        shell: bash
+        run: bash tools/test-dbs-install-skill-windows.sh
