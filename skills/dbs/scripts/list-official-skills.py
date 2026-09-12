@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""列出当前版本登记且已经安装的正式 dbskill Skill。"""
+"""列出当前版本已登记且已经安装的 dbskill Skill，包括本仓库本地扩展。"""
 
 from __future__ import annotations
 
@@ -52,16 +52,30 @@ def locate_installed_skill(name: str, search_roots: list[Path]) -> Path | None:
 
 
 def load_catalog(skill_dir: Path, project_root: Path | None) -> list[dict[str, str]]:
+    catalog: list[dict[str, str]] = []
+
     if project_root is not None:
         marketplace_path = project_root / ".claude-plugin" / "marketplace.json"
         marketplace = json.loads(marketplace_path.read_text(encoding="utf-8"))
-        return [
+        catalog.extend(
             {
                 "name": plugin.get("name", ""),
                 "description": plugin.get("description", ""),
             }
             for plugin in marketplace.get("plugins", [])
-        ]
+        )
+
+        local_registry = project_root / ".dbs-local" / "custom-skills.json"
+        if local_registry.is_file():
+            local = json.loads(local_registry.read_text(encoding="utf-8"))
+            catalog.extend(
+                {
+                    "name": skill.get("name", ""),
+                    "description": skill.get("description", ""),
+                }
+                for skill in local.get("skills", [])
+            )
+        return catalog
 
     snapshot_path = skill_dir / "references" / "official-skill-names.txt"
     if not snapshot_path.is_file():
@@ -91,9 +105,10 @@ def main() -> int:
     )
 
     results: list[dict[str, str]] = []
+    seen: set[str] = set()
     for entry in catalog:
         name = entry.get("name", "")
-        if not name or name == "dbs" or "beta" in name or "private" in name:
+        if not name or name == "dbs" or "beta" in name or "private" in name or name in seen:
             continue
 
         skill_dir_path = locate_installed_skill(name, search_roots)
@@ -109,6 +124,7 @@ def main() -> int:
                 "source": str(skill_dir_path),
             }
         )
+        seen.add(name)
 
     print(json.dumps(results, ensure_ascii=False, indent=2))
     return 0
