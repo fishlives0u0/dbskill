@@ -23,6 +23,8 @@ jobs:
           cp -a .dbs-local /tmp/dbs-local-backup/
           cp -a skills/dbs-convert /tmp/dbs-local-backup/
           cp -a tools/apply-local-dbs-extensions.py /tmp/dbs-local-backup/
+          cp -a tools/check-marketplace-scope.py /tmp/dbs-local-backup/
+          cp -a skills/dbs/scripts/list-official-skills.py /tmp/dbs-local-backup/
           cp -a .github/workflows/sync-upstream.yml /tmp/dbs-local-backup/
 
       - name: Fetch upstream
@@ -36,6 +38,8 @@ jobs:
             --exclude '.dbs-local/' \
             --exclude 'skills/dbs-convert/' \
             --exclude 'tools/apply-local-dbs-extensions.py' \
+            --exclude 'tools/check-marketplace-scope.py' \
+            --exclude 'skills/dbs/scripts/list-official-skills.py' \
             --exclude '.github/workflows/sync-upstream.yml' \
             /tmp/upstream/ ./
 
@@ -45,10 +49,19 @@ jobs:
           cp -a /tmp/dbs-local-backup/.dbs-local ./.dbs-local
           cp -a /tmp/dbs-local-backup/dbs-convert ./skills/dbs-convert
           cp -a /tmp/dbs-local-backup/apply-local-dbs-extensions.py ./tools/apply-local-dbs-extensions.py
+          cp -a /tmp/dbs-local-backup/check-marketplace-scope.py ./tools/check-marketplace-scope.py
+          cp -a /tmp/dbs-local-backup/list-official-skills.py ./skills/dbs/scripts/list-official-skills.py
           cp -a /tmp/dbs-local-backup/sync-upstream.yml ./.github/workflows/sync-upstream.yml
 
       - name: Register local skills in DBS
         run: python3 tools/apply-local-dbs-extensions.py
+
+      - name: Run focused integrity checks
+        run: |
+          python3 tools/check-marketplace-scope.py
+          python3 tools/check-skill-metadata.py
+          python3 tools/check-release-versions.py
+          python3 tools/check-plugin-update-contract.py
 
       - name: Commit synchronized result
         run: |
