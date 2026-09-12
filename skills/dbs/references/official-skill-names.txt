@@ -1,4 +1,4 @@
-# 由 .claude-plugin/marketplace.json 中除 dbs 外的正式条目生成并校验。
+# 由 .claude-plugin/marketplace.json 中除 dbs 外的正式条目生成并校验；末尾追加本仓库本地扩展。
 dbs-update
 dbs-diagnosis
 dbs-benchmark
@@ -31,3 +31,4 @@ dbs-learning
 dbs-spread
 dbs-resonate
 dbs-script-flow
+dbs-convert
