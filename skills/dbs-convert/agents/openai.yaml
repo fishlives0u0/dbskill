@@ -1,0 +1,4 @@
+interface:
+  display_name: "dbs-convert"
+  short_description: "诊断咨询型内容的转化链，补齐付费触发、能力证据、服务结果与行动入口"
+  default_prompt: "使用 $dbs-convert，检查并优化当前内容的咨询或服务转化链。"
