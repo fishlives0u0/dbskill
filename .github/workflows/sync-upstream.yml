@@ -1,0 +1,63 @@
+name: Sync upstream DBS and keep local skills
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout local repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Preserve local extensions
+        run: |
+          mkdir -p /tmp/dbs-local-backup
+          cp -a .dbs-local /tmp/dbs-local-backup/
+          cp -a skills/dbs-convert /tmp/dbs-local-backup/
+          cp -a tools/apply-local-dbs-extensions.py /tmp/dbs-local-backup/
+          cp -a .github/workflows/sync-upstream.yml /tmp/dbs-local-backup/
+
+      - name: Fetch upstream
+        run: |
+          git clone --depth 1 https://github.com/dontbesilent2025/dbskill.git /tmp/upstream
+
+      - name: Mirror upstream working tree
+        run: |
+          rsync -a --delete \
+            --exclude '.git/' \
+            --exclude '.dbs-local/' \
+            --exclude 'skills/dbs-convert/' \
+            --exclude 'tools/apply-local-dbs-extensions.py' \
+            --exclude '.github/workflows/sync-upstream.yml' \
+            /tmp/upstream/ ./
+
+      - name: Restore local extensions
+        run: |
+          rm -rf .dbs-local skills/dbs-convert
+          cp -a /tmp/dbs-local-backup/.dbs-local ./.dbs-local
+          cp -a /tmp/dbs-local-backup/dbs-convert ./skills/dbs-convert
+          cp -a /tmp/dbs-local-backup/apply-local-dbs-extensions.py ./tools/apply-local-dbs-extensions.py
+          cp -a /tmp/dbs-local-backup/sync-upstream.yml ./.github/workflows/sync-upstream.yml
+
+      - name: Register local skills in DBS
+        run: python3 tools/apply-local-dbs-extensions.py
+
+      - name: Commit synchronized result
+        run: |
+          if git diff --quiet && git diff --cached --quiet; then
+            echo 'Upstream and local DBS are already synchronized.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'sync upstream dbskill and preserve local extensions'
+          git push
