@@ -1,0 +1,18 @@
+{
+  "skills": [
+    {
+      "name": "dbs-convert",
+      "description": "诊断并改写已有内容里的咨询/服务转化链。适合内容已有选题、标题或正文，并希望增强付费触发点、判断分叉、能力证据、服务结果与行动入口时使用。",
+      "source": "./skills/dbs-convert",
+      "category": "content-creation",
+      "keywords": [
+        "conversion",
+        "consultation",
+        "service",
+        "content",
+        "xiaohongshu",
+        "chinese"
+      ]
+    }
+  ]
+}
