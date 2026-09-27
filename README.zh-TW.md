@@ -10,7 +10,7 @@
 
 **支援：豆包、WorkBuddy、Claude Code、Codex，以及其他支援 Skills 的 Agent。**
 
-dbskill 由 [dontbesilent](https://x.com/dontbesilent) 建立。它從 16,152 則公開貼文中，整理出 4,176 個結構化知識原子與 32 個可直接呼叫的正式業務 Skill。
+dbskill 由 [dontbesilent](https://x.com/dontbesilent) 建立。它從 16,152 則公開貼文中，整理出 4,176 個結構化知識原子與 33 個可直接呼叫的正式業務 Skill。
 
 **v2.18.40 更新：** 理論溯源現可獨立呼叫，快速核驗命題、理論來源與案例邊界。
 
@@ -60,7 +60,7 @@ dbskill 由 [dontbesilent](https://x.com/dontbesilent) 建立。它從 16,152 �
 | 找對標並提煉可學習的部分 | `/dbs-benchmark` | 對標篩選與研究框架 |
 | 審查經驗判斷並找到可信理論依據 | `/dbs-theory-grounding` | 命題修正、理論錨點、案例重釋與適用邊界 |
 | 先挖掘相關領域、作者和可信理論，再研究歷史同構答案 | `/dbs-standard-answer` | 理論錨點、案例矩陣、條件性答案與失效邊界 |
-| 做選題、內容、標題與短影片 | `/dbs-content`、`/dbs-hook`、`/dbs-xhs-title` | 內容方向與可發布文案 |
+| 做選題、內容、標題與短影片 | `/dbs-content`、`/dbs-content-value`、`/dbs-hook`、`/dbs-xhs-title` | 內容方向與可發布文案 |
 | 提取短影片資料與語音文字稿 | `/dbs-video-extract` | 作品／帳號資料、依作者與標題歸檔的 Markdown 文字稿 |
 | 發布前檢查敏感詞、導流、廣告與受限內容 | `/dbs-content-risk-check` | 機器審核訊號、內容問題與最小修改動作 |
 | 檢查文稿共鳴、邏輯與傳播性 | `/dbs-resonate`、`/dbs-script-flow`、`/dbs-spread` | 修改意見與優先順序 |
@@ -70,7 +70,7 @@ dbskill 由 [dontbesilent](https://x.com/dontbesilent) 建立。它從 16,152 �
 | 建立內容資產與多端 Agent 工作台 | `/dbs-content-system`、`/dbs-agent-migration`、`/dbs-install-skill` | 本機工程、主題地圖與安裝方案 |
 | 把本機資料夾變成知識庫 | `/dbs-knowledge` | 知識庫導航、版本規則與可直接使用的提問入口 |
 
-完整的 32 個正式業務 Skill、適用時機、輸入範例與動態編排方式，見[新手入門與 Skill 全目錄](docs/新手入门.md#skill-全目录)。
+完整的 33 個正式業務 Skill、適用時機、輸入範例與動態編排方式，見[新手入門與 Skill 全目錄](docs/新手入门.md#skill-全目录)。
 
 ## 安裝
 
@@ -93,7 +93,7 @@ claude plugin marketplace add dontbesilent2025/dbskill
 claude plugin install dbs@dontbesilent-skills
 ```
 
-這個 `dbs` 外掛包含 32 個正式業務 Skill 和 1 個 `dbs-update` 系統更新入口。Claude Code 會為外掛 Skill 加上命名空間：主入口使用 `/dbs:dbs`，具體能力例如 `/dbs:dbs-diagnosis`。
+這個 `dbs` 外掛包含 33 個正式業務 Skill 和 1 個 `dbs-update` 系統更新入口。Claude Code 會為外掛 Skill 加上命名空間：主入口使用 `/dbs:dbs`，具體能力例如 `/dbs:dbs-diagnosis`。
 
 只想安裝一個能力時，可以在外掛市集中選擇對應外掛，例如 `claude plugin install dbs-diagnosis@dontbesilent-skills`。
 

@@ -10,7 +10,7 @@
 
 **Supported in Doubao, WorkBuddy, Claude Code, Codex, and other Agents that support Skills.**
 
-Created by [dontbesilent](https://x.com/dontbesilent), dbskill distills 4,176 structured knowledge atoms and 32 directly callable business Skills from 16,152 public posts.
+Created by [dontbesilent](https://x.com/dontbesilent), dbskill distills 4,176 structured knowledge atoms and 33 directly callable business Skills from 16,152 public posts.
 
 **v2.18.40:** Theory grounding is now available as a standalone Skill for auditing claims, verifying sources, and defining case boundaries.
 
@@ -60,7 +60,7 @@ When you already know the task, call a Skill directly:
 | Find and study benchmarks | `/dbs-benchmark` | Benchmark shortlist and research framework |
 | Audit an experiential claim and ground it in a credible theory | `/dbs-theory-grounding` | Revised claim, theory anchor, case reinterpretation, and boundaries |
 | Ground a problem in relevant fields and theories, then study historical analogies | `/dbs-standard-answer` | Theory anchor, case matrix, conditional answer, and failure boundaries |
-| Create topics, content, titles, and videos | `/dbs-content`, `/dbs-hook`, `/dbs-xhs-title` | Direction and publishable copy |
+| Create topics, content, titles, and videos | `/dbs-content`, `/dbs-content-value`, `/dbs-hook`, `/dbs-xhs-title` | Direction and publishable copy |
 | Extract short-video data and speech transcripts | `/dbs-video-extract` | Work or account data plus Markdown transcripts filed by author and title |
 | Check content risks before publishing | `/dbs-content-risk-check` | Machine-review signals, substantive issues, and minimal edits |
 | Review resonance, logic, and reach | `/dbs-resonate`, `/dbs-script-flow`, `/dbs-spread` | Prioritized edits |
@@ -70,7 +70,7 @@ When you already know the task, call a Skill directly:
 | Build content assets and multi-Agent workflows | `/dbs-content-system`, `/dbs-agent-migration`, `/dbs-install-skill` | Local project, topic map, and installation plan |
 | Turn a local folder into a knowledge base | `/dbs-knowledge` | Knowledge navigation, version rules, and ready-to-use prompts |
 
-See the [full guide and Skill directory](docs/新手入门.md#skill-全目录) for all 32 business Skills, examples, and workflows.
+See the [full guide and Skill directory](docs/新手入门.md#skill-全目录) for all 33 business Skills, examples, and workflows.
 
 ## Install
 
@@ -93,7 +93,7 @@ claude plugin marketplace add dontbesilent2025/dbskill
 claude plugin install dbs@dontbesilent-skills
 ```
 
-The `dbs` plugin includes all 32 public business Skills plus the `dbs-update` system entry. Claude Code namespaces plugin Skills: use `/dbs:dbs` for the main entry and commands such as `/dbs:dbs-diagnosis` for a specific capability.
+The `dbs` plugin includes all 33 public business Skills plus the `dbs-update` system entry. Claude Code namespaces plugin Skills: use `/dbs:dbs` for the main entry and commands such as `/dbs:dbs-diagnosis` for a specific capability.
 
 To install only one capability, choose its marketplace plugin, for example `claude plugin install dbs-diagnosis@dontbesilent-skills`.
 

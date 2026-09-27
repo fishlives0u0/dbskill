@@ -10,7 +10,7 @@
 
 **豆包、WorkBuddy、Claude Code、Codex、および Skills に対応する他の Agent で利用できます。**
 
-dbskill は [dontbesilent](https://x.com/dontbesilent) が作成しました。公開投稿 16,152 件から、4,176 件の構造化知識原子と直接呼び出せる 32 の正式ビジネス Skill を整理しています。
+dbskill は [dontbesilent](https://x.com/dontbesilent) が作成しました。公開投稿 16,152 件から、4,176 件の構造化知識原子と直接呼び出せる 33 の正式ビジネス Skill を整理しています。
 
 **v2.18.40：** 理論の根拠づけを単独で呼び出し、命題、出典、事例の適用範囲をすばやく検証できるようになりました。
 
@@ -60,7 +60,7 @@ dbskill は [dontbesilent](https://x.com/dontbesilent) が作成しました。�
 | 研究対象を探す | `/dbs-benchmark` | 対象リストと研究フレーム |
 | 経験的な主張を検証し、信頼できる理論で根拠づける | `/dbs-theory-grounding` | 命題の修正、理論アンカー、事例の再解釈、適用範囲 |
 | 関連分野と理論を調べ、歴史的な同型事例を比較する | `/dbs-standard-answer` | 理論アンカー、事例マトリクス、条件付きの答え、失敗条件 |
-| テーマ、コンテンツ、タイトル、動画を作る | `/dbs-content`、`/dbs-hook`、`/dbs-xhs-title` | 方向性と公開用原稿 |
+| テーマ、コンテンツ、タイトル、動画を作る | `/dbs-content`、`/dbs-content-value`、`/dbs-hook`、`/dbs-xhs-title` | 方向性と公開用原稿 |
 | ショート動画のデータと音声文字起こしを取得する | `/dbs-video-extract` | 作品／アカウントデータと、作者・タイトル別の Markdown 文字起こし |
 | 公開前にコンテンツリスクを確認する | `/dbs-content-risk-check` | 自動審査のシグナル、内容上の問題、最小限の修正 |
 | 共感、論理、拡散性を確認する | `/dbs-resonate`、`/dbs-script-flow`、`/dbs-spread` | 優先順位付きの修正案 |
@@ -70,7 +70,7 @@ dbskill は [dontbesilent](https://x.com/dontbesilent) が作成しました。�
 | コンテンツ資産と複数 Agent の環境を構築する | `/dbs-content-system`、`/dbs-agent-migration`、`/dbs-install-skill` | ローカルプロジェクトとインストール計画 |
 | ローカルフォルダをナレッジベースにする | `/dbs-knowledge` | ナビゲーション、バージョン規則、すぐ使える質問例 |
 
-32 の正式ビジネス Skill の全一覧、入力例、使い分けは [完全ガイド](docs/新手入门.md#skill-全目录) を参照してください。
+33 の正式ビジネス Skill の全一覧、入力例、使い分けは [完全ガイド](docs/新手入门.md#skill-全目录) を参照してください。
 
 ## インストール
 

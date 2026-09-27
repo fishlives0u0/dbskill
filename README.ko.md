@@ -10,7 +10,7 @@
 
 **豆包, WorkBuddy, Claude Code, Codex 및 Skills 를 지원하는 다른 Agent 에서 사용할 수 있습니다.**
 
-dbskill 은 [dontbesilent](https://x.com/dontbesilent)가 만들었습니다. 공개 게시물 16,152 개에서 4,176 개의 구조화 지식 원자와 직접 호출할 수 있는 정식 비즈니스 Skill 32 개를 정리했습니다.
+dbskill 은 [dontbesilent](https://x.com/dontbesilent)가 만들었습니다. 공개 게시물 16,152 개에서 4,176 개의 구조화 지식 원자와 직접 호출할 수 있는 정식 비즈니스 Skill 33 개를 정리했습니다.
 
 **v2.18.40:** 이론 근거화를 독립 Skill 로 호출해 명제, 출처, 사례의 적용 경계를 빠르게 검증할 수 있습니다.
 
@@ -60,7 +60,7 @@ dbskill 은 [dontbesilent](https://x.com/dontbesilent)가 만들었습니다. �
 | 벤치마크 탐색과 연구 | `/dbs-benchmark` | 대상 목록과 연구 프레임 |
 | 경험적 주장을 검토하고 신뢰할 수 있는 이론으로 근거화 | `/dbs-theory-grounding` | 명제 수정, 이론 앵커, 사례 재해석, 적용 경계 |
 | 관련 분야와 이론을 조사한 뒤 역사적 동형 사례를 비교 | `/dbs-standard-answer` | 이론 앵커, 사례 매트릭스, 조건부 답변, 실패 경계 |
-| 주제, 콘텐츠, 제목, 영상 제작 | `/dbs-content`, `/dbs-hook`, `/dbs-xhs-title` | 방향과 게시용 원고 |
+| 주제, 콘텐츠, 제목, 영상 제작 | `/dbs-content`, `/dbs-content-value`, `/dbs-hook`, `/dbs-xhs-title` | 방향과 게시용 원고 |
 | 숏폼 동영상 데이터와 음성 원고 추출 | `/dbs-video-extract` | 작품／계정 데이터와 작성자·제목별 Markdown 원고 |
 | 게시 전 콘텐츠 위험 점검 | `/dbs-content-risk-check` | 자동 심사 신호, 내용 문제, 최소 수정안 |
 | 공감, 논리, 확산성 점검 | `/dbs-resonate`, `/dbs-script-flow`, `/dbs-spread` | 우선순위가 있는 수정안 |

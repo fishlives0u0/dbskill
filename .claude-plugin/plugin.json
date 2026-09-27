@@ -11,6 +11,7 @@
     "./skills/dbs-theory-grounding",
     "./skills/dbs-action",
     "./skills/dbs-content",
+    "./skills/dbs-content-value",
     "./skills/dbs-content-risk-check",
     "./skills/dbs-content-system",
     "./skills/dbs-video-extract",

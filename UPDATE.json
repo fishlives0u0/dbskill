@@ -1,5 +1,5 @@
 {
-  "version": "2.18.42",
-  "notice": "现在可联网读取新编号；以后新增隐藏款无需再次更新 dbskill",
+  "version": "2.18.44",
+  "notice": "公开版清理内部标记和本地 Skill 引用，统一导航提示",
   "details_url": "https://github.com/dontbesilent2025/dbskill/commits/main"
 }
