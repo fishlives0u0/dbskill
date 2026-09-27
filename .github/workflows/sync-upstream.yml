@@ -40,7 +40,7 @@ jobs:
             --exclude 'tools/apply-local-dbs-extensions.py' \
             --exclude 'tools/check-marketplace-scope.py' \
             --exclude 'skills/dbs/scripts/list-official-skills.py' \
-            --exclude '.github/workflows/sync-upstream.yml' \
+            --exclude '.github/workflows/' \
             /tmp/upstream/ ./
 
       - name: Restore local extensions
