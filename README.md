@@ -4,7 +4,7 @@
 
 > 面向创业者与内容创作者的中文 AI Skills 工具箱。把真实业务、内容与行动问题交给 Agent，获得清晰判断和可以立刻执行的下一步。
 
-[![Version](https://img.shields.io/badge/version-2.18.40-2563EB.svg?style=flat-square)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.18.42-2563EB.svg?style=flat-square)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/dontbesilent2025/dbskill)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-16A34A.svg?style=flat-square)](LICENSE)
 
@@ -41,6 +41,8 @@ dbskill 由 [dontbesilent](https://x.com/dontbesilent) 创建。从 16,152 条�
 ```
 
 `/dbs` 会读取当前对话信息，说明推荐理由，并生成一段可以直接继续发送的提示词。完成一轮后，继续补充新的事实或反馈，再输入 `/dbs`，它会重新判断当前任务需要单项还是组合。
+
+视频附有三位编号时，输入 `/dbs 给我所有隐藏级 skill` 可查询已发布的编号，输入 `/dbs <编号>` 可直接按对应方法开始。编号内容在使用时从 GitHub 读取，需要能访问 GitHub；以后新增编号无需再次更新 dbskill。当前没有已发布的编号时，目录会如实提示。
 
 已经知道需求时，可以直接调用具体 Skill：
 

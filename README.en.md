@@ -40,6 +40,8 @@ Help me determine whether the issue is the product, pricing, or customer segment
 ```
 
 `/dbs` reads the current conversation, explains its selection, and generates a prompt you can send directly. Add new facts or feedback after a round, then call `/dbs` again to reassess the current task.
+For videos with a three-digit code, use `/dbs list all hidden skills` to see published codes, then `/dbs <code>` to start the matching method. The content is fetched from GitHub when used, so GitHub access is required. New codes do not require another dbskill update. An empty catalog is reported as empty.
+
 
 When you already know the task, call a Skill directly:
 

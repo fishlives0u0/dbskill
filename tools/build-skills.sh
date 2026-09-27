@@ -96,6 +96,11 @@ build_one() {
     cp -R "$skill_dir/references/." "$stage_dir/references/"
   fi
 
+  if [ -d "$skill_dir/numbered-prompts" ]; then
+    mkdir -p "$stage_dir/numbered-prompts"
+    cp -R "$skill_dir/numbered-prompts/." "$stage_dir/numbered-prompts/"
+  fi
+
   if [ -d "$skill_dir/assets" ]; then
     mkdir -p "$stage_dir/assets"
     cp -R "$skill_dir/assets/." "$stage_dir/assets/"
