@@ -60,10 +60,15 @@ dbskill 은 [dontbesilent](https://x.com/dontbesilent)가 만들었습니다. �
 | 벤치마크 탐색과 연구 | `/dbs-benchmark` | 대상 목록과 연구 프레임 |
 | 경험적 주장을 검토하고 신뢰할 수 있는 이론으로 근거화 | `/dbs-theory-grounding` | 명제 수정, 이론 앵커, 사례 재해석, 적용 경계 |
 | 관련 분야와 이론을 조사한 뒤 역사적 동형 사례를 비교 | `/dbs-standard-answer` | 이론 앵커, 사례 매트릭스, 조건부 답변, 실패 경계 |
-| 주제, 콘텐츠, 제목, 영상 제작 | `/dbs-content`, `/dbs-content-value`, `/dbs-hook`, `/dbs-xhs-title` | 방향과 게시용 원고 |
+| 확정한 주제를 콘텐츠로 발전시키기 | `/dbs-content` | 형식과 제작 방향 |
+| 콘텐츠의 대상, 예상 반응, 사업 가치 평가 | `/dbs-content-value` | 콘텐츠 전체 성과 진단 |
+| 숏폼 영상 도입부 개선 | `/dbs-hook` | 도입부 진단과 여러 수정안 |
+| 샤오홍슈 제목 생성 | `/dbs-xhs-title` | 제목 후보와 공식 설명 |
 | 숏폼 동영상 데이터와 음성 원고 추출 | `/dbs-video-extract` | 작품／계정 데이터와 작성자·제목별 Markdown 원고 |
 | 게시 전 콘텐츠 위험 점검 | `/dbs-content-risk-check` | 자동 심사 신호, 내용 문제, 최소 수정안 |
-| 공감, 논리, 확산성 점검 | `/dbs-resonate`, `/dbs-script-flow`, `/dbs-spread` | 우선순위가 있는 수정안 |
+| 완성된 원고의 공감 부족 지점 진단 | `/dbs-resonate` | 원문별 진단과 수정 제안 |
+| 기존 콘텐츠가 공감이나 공유를 얻는 이유 해석 | `/dbs-spread` | 시청자 감정, 공유 동기, 토론 방향 |
+| 숏폼 대본의 흐름 점검 | `/dbs-script-flow` | 문단 연결, 정보 밀도, 말하기 자연스러움 |
 | 개념, 목표, 질문 명확화 | `/dbs-deconstruct`, `/dbs-goal`, `/dbs-good-question` | 검증 가능한 정의와 목표 |
 | 미루기와 실행 정체 해결 | `/dbs-action` | 정체 분석과 다음 행동 |
 | 장기 의사결정 기록과 회고 | `/dbs-decision`, `/dbs-save`, `/dbs-restore`, `/dbs-report` | 로컬 기록과 보고서 |

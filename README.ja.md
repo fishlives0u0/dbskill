@@ -60,10 +60,15 @@ dbskill は [dontbesilent](https://x.com/dontbesilent) が作成しました。�
 | 研究対象を探す | `/dbs-benchmark` | 対象リストと研究フレーム |
 | 経験的な主張を検証し、信頼できる理論で根拠づける | `/dbs-theory-grounding` | 命題の修正、理論アンカー、事例の再解釈、適用範囲 |
 | 関連分野と理論を調べ、歴史的な同型事例を比較する | `/dbs-standard-answer` | 理論アンカー、事例マトリクス、条件付きの答え、失敗条件 |
-| テーマ、コンテンツ、タイトル、動画を作る | `/dbs-content`、`/dbs-content-value`、`/dbs-hook`、`/dbs-xhs-title` | 方向性と公開用原稿 |
+| 決定したテーマをコンテンツにする | `/dbs-content` | 形式と制作方針 |
+| コンテンツの受け手、見込まれる反応、商業価値を評価する | `/dbs-content-value` | コンテンツ全体の評価 |
+| ショート動画の冒頭を改善する | `/dbs-hook` | 冒頭の診断と複数の書き換え案 |
+| 小紅書のタイトルを作る | `/dbs-xhs-title` | タイトル案と公式の説明 |
 | ショート動画のデータと音声文字起こしを取得する | `/dbs-video-extract` | 作品／アカウントデータと、作者・タイトル別の Markdown 文字起こし |
 | 公開前にコンテンツリスクを確認する | `/dbs-content-risk-check` | 自動審査のシグナル、内容上の問題、最小限の修正 |
-| 共感、論理、拡散性を確認する | `/dbs-resonate`、`/dbs-script-flow`、`/dbs-spread` | 優先順位付きの修正案 |
+| 完成稿の共感が弱い箇所を診断する | `/dbs-resonate` | 原文箇所ごとの診断と修正案 |
+| 既存コンテンツが共感・共有される仕組みを解説する | `/dbs-spread` | 受け手の感情、共有動機、議論の方向 |
+| ショート動画台本の流れを確認する | `/dbs-script-flow` | 段落の接続、情報密度、話しやすさ |
 | 概念、目標、問いを明確にする | `/dbs-deconstruct`、`/dbs-goal`、`/dbs-good-question` | 検証可能な定義と目標 |
 | 先延ばしや実行の停滞を扱う | `/dbs-action` | 停滞分析と次の行動 |
 | 長期の意思決定を記録・振り返る | `/dbs-decision`、`/dbs-save`、`/dbs-restore`、`/dbs-report` | ローカルの記録とレポート |

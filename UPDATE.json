@@ -1,5 +1,5 @@
 {
-  "version": "2.18.44",
-  "notice": "公开版清理内部标记和本地 Skill 引用，统一导航提示",
+  "version": "2.18.45",
+  "notice": "区分内容流量评估、稿件共鸣诊断、传播机制解读和短视频开头优化入口",
   "details_url": "https://github.com/dontbesilent2025/dbskill/commits/main"
 }

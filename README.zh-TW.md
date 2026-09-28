@@ -60,10 +60,15 @@ dbskill 由 [dontbesilent](https://x.com/dontbesilent) 建立。它從 16,152 �
 | 找對標並提煉可學習的部分 | `/dbs-benchmark` | 對標篩選與研究框架 |
 | 審查經驗判斷並找到可信理論依據 | `/dbs-theory-grounding` | 命題修正、理論錨點、案例重釋與適用邊界 |
 | 先挖掘相關領域、作者和可信理論，再研究歷史同構答案 | `/dbs-standard-answer` | 理論錨點、案例矩陣、條件性答案與失效邊界 |
-| 做選題、內容、標題與短影片 | `/dbs-content`、`/dbs-content-value`、`/dbs-hook`、`/dbs-xhs-title` | 內容方向與可發布文案 |
+| 把已確定的選題發展成內容 | `/dbs-content` | 形式與製作方向 |
+| 評估內容受眾、可能流量與商業價值 | `/dbs-content-value` | 整體內容表現判斷 |
+| 優化短影片開頭 | `/dbs-hook` | 開頭診斷與多種改寫方案 |
+| 生成小紅書標題 | `/dbs-xhs-title` | 標題方案與公式說明 |
 | 提取短影片資料與語音文字稿 | `/dbs-video-extract` | 作品／帳號資料、依作者與標題歸檔的 Markdown 文字稿 |
 | 發布前檢查敏感詞、導流、廣告與受限內容 | `/dbs-content-risk-check` | 機器審核訊號、內容問題與最小修改動作 |
-| 檢查文稿共鳴、邏輯與傳播性 | `/dbs-resonate`、`/dbs-script-flow`、`/dbs-spread` | 修改意見與優先順序 |
+| 診斷已完成稿件的共鳴問題 | `/dbs-resonate` | 指向原句的診斷與修改建議 |
+| 解釋既有內容為何引發共鳴或分享 | `/dbs-spread` | 受眾情緒、分享動機與討論方向 |
+| 檢查短影片稿件的邏輯延續 | `/dbs-script-flow` | 段落銜接、資訊密度與口語流暢度 |
 | 釐清概念、目標和問題 | `/dbs-deconstruct`、`/dbs-goal`、`/dbs-good-question` | 可驗證的定義與行動目標 |
 | 處理拖延與行動受阻 | `/dbs-action` | 卡點分析與下一步動作 |
 | 紀錄、復盤長期決策 | `/dbs-decision`、`/dbs-save`、`/dbs-restore`、`/dbs-report` | 本機決策檔案與報告 |

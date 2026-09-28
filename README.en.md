@@ -60,10 +60,15 @@ When you already know the task, call a Skill directly:
 | Find and study benchmarks | `/dbs-benchmark` | Benchmark shortlist and research framework |
 | Audit an experiential claim and ground it in a credible theory | `/dbs-theory-grounding` | Revised claim, theory anchor, case reinterpretation, and boundaries |
 | Ground a problem in relevant fields and theories, then study historical analogies | `/dbs-standard-answer` | Theory anchor, case matrix, conditional answer, and failure boundaries |
-| Create topics, content, titles, and videos | `/dbs-content`, `/dbs-content-value`, `/dbs-hook`, `/dbs-xhs-title` | Direction and publishable copy |
+| Develop a confirmed topic into content | `/dbs-content` | Format and production direction |
+| Assess content audience, likely reach, and business value | `/dbs-content-value` | Overall content-performance assessment |
+| Improve a short-video opening | `/dbs-hook` | Opening diagnosis and rewrite options |
+| Generate Xiaohongshu titles | `/dbs-xhs-title` | Title options and formula guidance |
 | Extract short-video data and speech transcripts | `/dbs-video-extract` | Work or account data plus Markdown transcripts filed by author and title |
 | Check content risks before publishing | `/dbs-content-risk-check` | Machine-review signals, substantive issues, and minimal edits |
-| Review resonance, logic, and reach | `/dbs-resonate`, `/dbs-script-flow`, `/dbs-spread` | Prioritized edits |
+| Diagnose resonance issues in a finished draft | `/dbs-resonate` | Line-specific diagnosis and revision suggestions |
+| Explain why existing content resonates or gets shared | `/dbs-spread` | Audience emotions, sharing motives, and discussion angles |
+| Check the flow of a short-video script | `/dbs-script-flow` | Transitions, information density, and spoken fluency |
 | Clarify concepts, goals, and questions | `/dbs-deconstruct`, `/dbs-goal`, `/dbs-good-question` | Testable definitions and goals |
 | Work through procrastination and execution blocks | `/dbs-action` | Blocker analysis and next action |
 | Record and review long-term decisions | `/dbs-decision`, `/dbs-save`, `/dbs-restore`, `/dbs-report` | Local decision archive and reports |
