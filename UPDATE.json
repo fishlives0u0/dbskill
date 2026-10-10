@@ -1,5 +1,5 @@
 {
-  "version": "2.18.47",
-  "notice": "新增人员任务委派，写清要求、处理反馈并验收成果；缺少飞书工具时提供可转发文字。",
+  "version": "2.18.49",
+  "notice": "补全安装、首次调用和材料准备说明，帮助新用户独立完成第一次使用",
   "details_url": "https://github.com/dontbesilent2025/dbskill/commits/main"
 }

@@ -4,7 +4,7 @@
 
 > 給創業者與內容創作者使用的中文 AI Skills 工具箱。把真實的商業、內容與行動問題交給 Agent，取得清晰判斷與可以立即執行的下一步。
 
-[![Version](https://img.shields.io/badge/version-2.18.47-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.18.49-111111.svg)](VERSION)
 [![Skills](https://img.shields.io/badge/Skills-37-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
@@ -12,11 +12,10 @@
 
 dbskill 由 [dontbesilent](https://x.com/dontbesilent) 建立。方法資料包含從 16,152 則公開貼文整理的 4,176 個知識原子；工具箱提供 34 個現行業務 Skill、2 個舊版相容入口和 1 個系統更新入口。
 
-**本次更新：** 新增人員任務委派，寫清要求、處理回饋並驗收成果；缺少飛書工具時提供可轉發文字。
+**本次更新：** Codex 技能清單同時顯示英文識別名稱與已確認的中文名稱，方便辨識與呼叫。
 
 [快速開始](#快速開始) · [安裝](#安裝) · [能力一覽](#能力一覽) · [完整指南](docs/新手入门.md) · [更新紀錄](https://github.com/dontbesilent2025/dbskill/commits/main)
 
-![dbskill 動態編排圖](docs/skill-link-map-4x3.svg)
 
 ## dbskill 可以處理什麼問題
 
@@ -146,7 +145,6 @@ claude plugin install dbs@dontbesilent-skills
 - 想了解各項方法，瀏覽 [Skill 知識包](知识库/Skill知识包)。
 - 想跨對話保留工作，使用 `/dbs-save`、`/dbs-restore` 與 `/dbs-report`。資料預設儲存在本機的 `~/.dbs/`。
 
-![dbskill 知識來源圖](docs/knowledge-pipeline.svg)
 
 ## 作者與支援
 
