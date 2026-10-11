@@ -4,7 +4,7 @@
 
 > A Chinese AI Skills toolkit for entrepreneurs and content creators. Give your Agent a real business, content, or execution problem, and get a clear judgment plus the next action you can take.
 
-[![Version](https://img.shields.io/badge/version-2.18.49-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.18.50-111111.svg)](VERSION)
 [![Skills](https://img.shields.io/badge/Skills-37-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
@@ -12,14 +12,14 @@
 
 Created by [dontbesilent](https://x.com/dontbesilent), dbskill includes 4,176 knowledge atoms drawn from 16,152 public posts. The toolkit provides 34 current business Skills, 2 legacy entries, and 1 system update entry.
 
-**This update:** Codex Skill lists now show each English identifier with its confirmed Chinese name, making Skills easier to recognize and invoke.
+**This update:** `/dbs` works directly in the current conversation, combines or compares methods when useful, and names the Skills used and their roles.
 
 [Quick start](#quick-start) · [Install](#install) · [Capabilities](#capabilities) · [Full guide](docs/新手入门.md) · [Changes](https://github.com/dontbesilent2025/dbskill/commits/main)
 
 
 ## What dbskill helps you solve
 
-You do not need to learn a complex methodology first, or know which tool to invoke. Give `/dbs` your current business situation, material, decision, or blocker. It decides whether one Skill is sufficient; complex tasks can use one lead Skill and up to two supporting Skills.
+Give `/dbs` your situation, material, decision, or blocker. It chooses a useful next step: start working, clarify a key fact, ask for your preference, combine complementary Skills, or compare different approaches. Simple questions can be answered directly.
 
 | Situation | What you get |
 | --- | --- |
@@ -38,7 +38,7 @@ After installation, enter this in your Agent:
 Help me determine whether the issue is the product, pricing, or customer segment.
 ```
 
-`/dbs` reads the current conversation, explains its selection, and generates a prompt you can send directly. Add new facts or feedback after a round, then call `/dbs` again to reassess the current task.
+`/dbs` uses the existing conversation and starts working in the same chat. You can add facts or feedback without copying a prompt or invoking the entry again. It adjusts when evidence changes and stops when the goal is met. Ask explicitly if you only want recommendations or a reusable prompt.
 
 For videos with a three-digit code, use `/dbs list all hidden skills` to see published codes, then `/dbs <code>` to start the matching method. The content is fetched from GitHub when used, so GitHub access is required. New codes do not require another dbskill update. An empty catalog is reported as empty.
 
@@ -127,13 +127,13 @@ This syncs the official dbskill and does not modify records, reports, or decisio
 ```text
 A real task
    ↓
-/dbs reads context and decides between one Skill or a composition
+/dbs uses context to choose a useful next step
    ↓
-It generates a directly usable task prompt
+Work starts in the same chat; key gaps are clarified
    ↓
-The selected Skills deliver one unified result
+Use one method, combine capabilities, or compare approaches
    ↓
-Add results and feedback, then reassess the task
+Use results and feedback to continue, adjust, or finish
 ```
 
 ## Knowledge base and local records

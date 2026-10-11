@@ -4,11 +4,13 @@
 
 dbskill 是 dontbesilent 的中文 AI Skills 工具箱，包含商业判断、内容创作、行动决策、学习和知识管理等能力，可安装到支持 Skills 的 Agent 中使用
 
-[![Version](https://img.shields.io/badge/version-2.18.49-2563EB.svg?style=flat-square)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.18.50-2563EB.svg?style=flat-square)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-16A34A.svg?style=flat-square)](LICENSE)
 
 支持豆包、WorkBuddy、Claude Code、Codex 和其他兼容 Skills 的 Agent。项目方法资料从 16,152 条公开推文中筛选整理，包含 4,176 个结构化知识原子。作者：[@dontbesilent](https://x.com/dontbesilent)
+
+**本次更新：** `/dbs` 在当前对话中直接处理问题，按需组合或对照方法，并明确告知实际使用的 Skill 名称及分工。
 
 ## 目录
 
@@ -26,9 +28,9 @@ dbskill 是 dontbesilent 的中文 AI Skills 工具箱，包含商业判断、�
 
 Skill 是一套针对某类任务编写的 Agent 指令。安装 dbskill 后，可以在 Agent 对话中调用 `/dbs` 或某个具体 Skill，例如 `/dbs-diagnosis`
 
-如果你还不知道该用哪项能力，从 `/dbs` 开始。它读取当前对话，推荐适合当前任务的 Skill，并说明为什么这样选择。任务包含几项独立要求时，`/dbs` 可以安排 1 个主 Skill 和最多 2 个辅助 Skill
+如果你还不知道从哪里开始，把问题交给 `/dbs`。它读取已有信息，判断现在适合直接处理、补充关键事实，还是请你选择方向；需要时使用一个 Skill、组合互补能力，或对照尝试不同方法
 
-`/dbs` 负责推荐入口和准备调用提示词。具体 Skill 负责后续分析、制作、检查或文件工作。每次只处理一个当前任务；收到结果和新材料后，可以继续当前任务，或再次让 `/dbs` 判断下一步
+`/dbs` 在当前对话中调用合适的方法并继续工作，你无需复制提示词或重复背景。一次聚焦一个目标，可以交付配套结果或保留不同解释；后续依据事实和反馈继续、调整或结束。简单问题可以直接回答，缺少匹配能力时会明确说明
 
 dbskill 常用于这些工作：
 
@@ -96,7 +98,7 @@ claude plugin install dbs-diagnosis@dontbesilent-skills
 
 主入口会介绍能处理的任务、如何选择 Skill，以及怎样开始。之后可以直接提交你正在处理的问题
 
-### 不确定该用什么：让 `/dbs` 推荐
+### 不确定从哪里开始：把问题交给 `/dbs`
 
 把当前情况和问题写在 `/dbs` 后面。可以说得不完整，Agent 会先利用当前对话中已经提供的信息：
 
@@ -104,7 +106,9 @@ claude plugin install dbs-diagnosis@dontbesilent-skills
 /dbs 我做少儿编程课，有 40 个付费学员，但续费率很低。我不知道该先检查产品、定价还是客户匹配。
 ```
 
-`/dbs` 会说明推荐理由，并生成一段可继续发送的调用提示词。把它发给 Agent 后，推荐的 Skill 才开始完成具体任务。你无需重新描述已经说过的背景
+`/dbs` 会从已有材料直接开始，必要时提出一个影响判断的问题。用户偏好决定方向时会给出选项；多个方法有实际用途时会说明分工或比较依据。你继续补充事实即可，无需重发入口命令
+
+如果只想了解适合哪些 Skill，或需要一段带到其他对话的提示词，直接说明即可
 
 ### 已经知道要做什么：直接调用 Skill
 
@@ -178,7 +182,7 @@ claude plugin install dbs-diagnosis@dontbesilent-skills
 
 | 当前要做的事 | 入口 | 用途 |
 | --- | --- | --- |
-| 不确定该从哪个方法开始 | [`/dbs`](skills/dbs/SKILL.md) | 根据当前问题推荐入口并生成调用提示词 |
+| 不确定该从哪个方法开始 | [`/dbs`](skills/dbs/SKILL.md) | 根据当前问题选择下一步，在对话中直接推进 |
 | 检查商业模式、客户或定价 | [`/dbs-diagnosis`](skills/dbs-diagnosis/SKILL.md) | 判断当前商业问题并形成诊断方向 |
 | 研究可以学习的同行或产品 | [`/dbs-benchmark`](skills/dbs-benchmark/SKILL.md) | 筛选对标并分析可借鉴之处 |
 | 澄清复杂需求或用户购买动机 | [`/dbs-good-question`](skills/dbs-good-question/SKILL.md)、[`/dbs-jtbd`](skills/dbs-jtbd/SKILL.md) | 把模糊问题说清楚，分析用户想完成的任务 |

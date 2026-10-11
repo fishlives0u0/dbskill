@@ -1,5 +1,5 @@
 {
-  "version": "2.18.49",
-  "notice": "补全安装、首次调用和材料准备说明，帮助新用户独立完成第一次使用",
+  "version": "2.18.50",
+  "notice": "DBS 可在当前对话直接处理问题，按需组合或对照方法，并明确告知实际使用的 Skill 及分工",
   "details_url": "https://github.com/dontbesilent2025/dbskill/commits/main"
 }
