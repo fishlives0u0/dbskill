@@ -4,13 +4,13 @@
 
 dbskill 是 dontbesilent 的中文 AI Skills 工具箱，包含商业判断、内容创作、行动决策、学习和知识管理等能力，可安装到支持 Skills 的 Agent 中使用
 
-[![Version](https://img.shields.io/badge/version-2.18.50-2563EB.svg?style=flat-square)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.18.51-2563EB.svg?style=flat-square)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-16A34A.svg?style=flat-square)](LICENSE)
 
 支持豆包、WorkBuddy、Claude Code、Codex 和其他兼容 Skills 的 Agent。项目方法资料从 16,152 条公开推文中筛选整理，包含 4,176 个结构化知识原子。作者：[@dontbesilent](https://x.com/dontbesilent)
 
-**本次更新：** `/dbs` 在当前对话中直接处理问题，按需组合或对照方法，并明确告知实际使用的 Skill 名称及分工。
+**本次更新：** 各 Skill 遇到超出范围的需求时，会说明还需要哪种能力，由 `/dbs` 统一匹配具体 Skill。旧版 `dbs-hook`、`dbs-xhs-title` 已移除，标题、封面文字和视频开头请使用 `/dbs-title-cover-intro`。
 
 ## 目录
 
@@ -194,8 +194,6 @@ claude plugin install dbs-diagnosis@dontbesilent-skills
 | 发布前检查内容风险 | [`/dbs-content-risk-check`](skills/dbs-content-risk-check/SKILL.md) | 定位可能的审核信号和需要调整的内容 |
 | 梳理行动阻滞或长期选择 | [`/dbs-action`](skills/dbs-action/SKILL.md)、[`/dbs-decision`](skills/dbs-decision/SKILL.md) | 分析执行卡点，记录并复盘决策 |
 | 整理本地文件供 Agent 查找 | [`/dbs-knowledge`](skills/dbs-knowledge/SKILL.md) | 建立和维护文件夹知识库 |
-
-`dbs-hook` 和 `dbs-xhs-title` 是旧版兼容入口。新任务请使用 `dbs-title-cover-intro`
 
 ## 仓库资料
 

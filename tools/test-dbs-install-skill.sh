@@ -145,4 +145,35 @@ if DBS_INSTALL_HOME="$TEST_HOME" "$SCRIPT" link "$SOURCE_DIR/category-prefixed" 
 fi
 assert_link "$TEST_HOME/.agents/skills/stable-skill-name" "$TEST_DIR/other-source"
 
-echo "PASS: dbs-install-skill frontmatter 命名、自动路由与去重"
+rm "$TEST_HOME/.agents/skills/stable-skill-name"
+
+OTHER_GROK_SOURCE="$TEST_DIR/other-grok-source"
+mkdir -p "$OTHER_GROK_SOURCE" "$TEST_HOME/.grok/skills/stable-skill-name"
+printf '%s\n' '---' 'name: stable-skill-name' 'description: other' '---' > "$OTHER_GROK_SOURCE/SKILL.md"
+printf '%s\n' \
+  '---' \
+  'name: stable-skill-name' \
+  'user_invocable: true' \
+  '---' \
+  '## Grok Bridge' \
+  "- Source of truth: $OTHER_GROK_SOURCE/SKILL.md" \
+  > "$TEST_HOME/.grok/skills/stable-skill-name/SKILL.md"
+if DBS_INSTALL_HOME="$TEST_HOME" "$SCRIPT" link "$SOURCE_DIR/category-prefixed" > "$OUTPUT" 2>&1; then
+  fail "Grok 适配层指向其他现存真源时 link 应返回失败"
+fi
+grep -q "$OTHER_GROK_SOURCE/SKILL.md" "$TEST_HOME/.grok/skills/stable-skill-name/SKILL.md" || fail "指向其他真源的 Grok 适配层不应被覆盖"
+if DBS_INSTALL_HOME="$TEST_HOME" "$SCRIPT" unlink "$SOURCE_DIR/category-prefixed" > "$OUTPUT" 2>&1; then
+  fail "Grok 适配层指向其他真源时 unlink 应返回失败"
+fi
+[[ -f "$TEST_HOME/.grok/skills/stable-skill-name/SKILL.md" ]] || fail "指向其他真源的 Grok 适配层不应被删除"
+rm -rf "$TEST_HOME/.grok/skills/stable-skill-name"
+
+PRIVATE_COLLECTION="$TEST_DIR/private-collection"
+mkdir -p "$PRIVATE_COLLECTION/public-skill" "$PRIVATE_COLLECTION/private"
+printf '%s\n' '---' 'name: public-skill' 'description: test' '---' > "$PRIVATE_COLLECTION/public-skill/SKILL.md"
+printf '%s\n' '---' 'name: private-only' 'description: test' '---' > "$PRIVATE_COLLECTION/private/SKILL.md"
+DBS_INSTALL_HOME="$TEST_HOME" "$SCRIPT" link "$PRIVATE_COLLECTION" > "$OUTPUT"
+[[ -L "$TEST_HOME/.agents/skills/public-skill" ]] || fail "集合中的普通 Skill 应被安装"
+assert_missing "$TEST_HOME/.agents/skills/private-only"
+
+echo "PASS: dbs-install-skill frontmatter 命名、自动路由、去重、Grok 真源保护与 private 排除"

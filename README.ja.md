@@ -4,15 +4,15 @@
 
 > 起業家とコンテンツ制作者のための中国語 AI Skills ツールキット。ビジネス、コンテンツ、実行に関する現実の課題を Agent に渡し、明確な判断と次の具体的な行動を得られます。
 
-[![Version](https://img.shields.io/badge/version-2.18.50-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.18.51-111111.svg)](VERSION)
 [![Skills](https://img.shields.io/badge/Skills-37-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
 **豆包、WorkBuddy、Claude Code、Codex、および Skills に対応する他の Agent で利用できます。**
 
-dbskill は [dontbesilent](https://x.com/dontbesilent) が作成しました。公開投稿 16,152 件から整理した 4,176 件の知識原子を含み、現行の業務 Skill 34 個、旧版互換エントリ 2 個、更新エントリ 1 個を提供します。
+dbskill は [dontbesilent](https://x.com/dontbesilent) が作成しました。公開投稿 16,152 件から整理した 4,176 件の知識原子を含み、業務 Skill 34 個と更新エントリ 1 個を提供します。
 
-**今回の更新：** `/dbs` が同じ会話内で作業を進め、必要に応じて方法を組み合わせたり比較したりし、使用した Skill 名と役割を明示します。
+**今回の更新：** 各 Skill は対応範囲外の依頼を受けたとき、まだ必要な能力を説明し、`/dbs` が具体的な Skill を選びます。旧版の `dbs-hook` と `dbs-xhs-title` は削除しました。タイトル、表紙の文字、動画の冒頭には `/dbs-title-cover-intro` を使用してください。
 
 [クイックスタート](#クイックスタート) · [インストール](#インストール) · [機能](#機能一覧) · [完全ガイド](docs/新手入门.md) · [変更履歴](https://github.com/dontbesilent2025/dbskill/commits/main)
 
@@ -83,7 +83,7 @@ dbskill は [dontbesilent](https://x.com/dontbesilent) が作成しました。�
 
 ローカル動画またはタイムスタンプ付き SRT を渡してください。字幕のみの場合は最終画面サイズ、フレームレート、動画の総時間も必要です。出力は編集ソフトに読み込める黒背景の独立 MP4 です。原動画の編集や公開は自動では行いません。Agent が内容に合わせて章・話題・手順を選び、配置と時間を確認します。Python、FFmpeg/ffprobe、対応フォントが必要です。macOS は Swift/AppKit、その他の環境は Pillow と指定フォントを使えます。動画だけの場合は文字起こし機能も必要で、クラウド利用時はサービスとアップロード範囲を事前に説明します。中国語の講義動画で制作を検証済みですが、他の種類は体系的な評価を行っていません。
 
-タイトル、表紙の文字、動画の冒頭には `/dbs-title-cover-intro` を使用します。`/dbs-hook` と `/dbs-xhs-title` は旧版の明示的な呼び出しや比較用に残しています。
+タイトル、表紙の文字、動画の冒頭には `/dbs-title-cover-intro` を使用します。
 
 ## インストール
 
@@ -106,7 +106,7 @@ claude plugin marketplace add dontbesilent2025/dbskill
 claude plugin install dbs@dontbesilent-skills
 ```
 
-`dbs` プラグインには現行の業務 Skill 34 個、旧版互換エントリ 2 個、更新用の `dbs-update` が含まれます。Claude Code ではメイン入口に `/dbs:dbs`、個別機能に `/dbs:dbs-diagnosis` などを使用します。
+`dbs` プラグインには業務 Skill 34 個と更新用の `dbs-update` が含まれます。Claude Code ではメイン入口に `/dbs:dbs`、個別機能に `/dbs:dbs-diagnosis` などを使用します。
 
 機能を 1 つだけインストールする場合は、対応するプラグインを選択します。例：`claude plugin install dbs-diagnosis@dontbesilent-skills`
 

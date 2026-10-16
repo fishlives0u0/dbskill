@@ -34,7 +34,9 @@ class Discovery(unittest.TestCase):
                 (r/'sample/SKILL.md').write_text('---\nname: sample\ndescription: test\n---\n')
             self.assertEqual(m.locate_installed_skill('sample', roots), (roots[0]/'sample').resolve())
             (roots[1]/'sample/SKILL.md').write_text('---\nname: sample\ndescription: changed\n---\n')
-            self.assertIsNone(m.locate_installed_skill('sample', roots))
+            self.assertEqual(m.locate_installed_skill('sample', roots), (roots[0]/'sample').resolve())
+            (roots[0]/'sample/SKILL.md').write_text('---\nname: other\ndescription: test\n---\n')
+            self.assertEqual(m.locate_installed_skill('sample', roots), (roots[1]/'sample').resolve())
 
     def test_multiline_description(self):
         self.assertIn('理论溯源', m.read_frontmatter_description(ROOT/'skills/dbs-theory-grounding/SKILL.md'))

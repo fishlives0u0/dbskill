@@ -1,5 +1,5 @@
 {
-  "version": "2.18.50",
-  "notice": "DBS 可在当前对话直接处理问题，按需组合或对照方法，并明确告知实际使用的 Skill 及分工",
+  "version": "2.18.51",
+  "notice": "各 Skill 遇到超出范围的需求时说明还需要哪种能力，由 /dbs 统一匹配具体 Skill",
   "details_url": "https://github.com/dontbesilent2025/dbskill/commits/main"
 }

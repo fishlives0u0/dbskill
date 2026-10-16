@@ -50,9 +50,38 @@ def check_entry_contract(entry_text: str, composition_text: str) -> list[str]:
             if rule in content:
                 errors.append(f"{path} 含已废弃的强制流程：{rule}")
     return errors
-CONDITIONAL_NAVIGATION_MARKER = (
-    "只有用户明确询问下一步，且当前环境已经安装 `/dbs` 时"
-)
+CONDITIONAL_NAVIGATION_MARKER = "不点名其他 Skill"
+
+# 叶子 Skill 只描述还需要的能力，能力到 Skill 的匹配由 /dbs 完成。
+# 以下点名属于工具依赖、共用存档格式或用法示例，新增 Skill 时无需修改。
+ALLOWED_LEAF_MENTIONS = {
+    "dbs-save": {"dbs-restore", "dbs-report", "dbs-diagnosis", "dbs-benchmark"},
+    "dbs-restore": {"dbs-save"},
+    "dbs-report": {"dbs-save", "dbs-diagnosis"},
+    "dbs-agent-migration": {"dbs-install-skill"},
+    "dbs-skill-maker": {"dbs-install-skill"},
+    "dbs-install-skill": {"dbs-diagnosis"},
+    "dbs-update": {"dbs-diagnosis"},
+}
+
+
+def find_leaf_mentions(name: str, text: str, formal_names: list[str]) -> list[tuple[int, str]]:
+    """返回叶子 Skill 文本中点名其他正式叶子 Skill 的位置（行号, 被点名的 Skill）。"""
+    others = [
+        other
+        for other in formal_names
+        if other not in {"dbs", name} and other not in ALLOWED_LEAF_MENTIONS.get(name, set())
+    ]
+    if not others:
+        return []
+    pattern = re.compile(
+        r"(?<![\w-])(" + "|".join(sorted(map(re.escape, others), key=len, reverse=True)) + r")(?![\w-])"
+    )
+    return [
+        (line_number, match.group(1))
+        for line_number, line in enumerate(text.splitlines(), start=1)
+        for match in pattern.finditer(line)
+    ]
 
 DIRECT_HANDOFF_PATTERNS = (
     re.compile(r"(路由到|转到|交给|衔接)\s*[`*]*(/dbs-[a-z0-9-]+)"),
@@ -101,6 +130,16 @@ def main() -> None:
 
         if name == "dbs":
             continue
+
+        skill_dir = ROOT_DIR / "skills" / name
+        for path in [skill_path, *sorted(skill_dir.glob("references/*.md"))]:
+            for line_number, mentioned in find_leaf_mentions(
+                name, path.read_text(encoding="utf-8"), formal_names
+            ):
+                errors.append(
+                    f"{path.relative_to(ROOT_DIR)}:{line_number} 点名了其他 Skill {mentioned}；"
+                    "叶子 Skill 只描述还需要的能力，由 /dbs 匹配具体 Skill"
+                )
 
         for line_number, line in enumerate(text.splitlines(), start=1):
             for pattern in DIRECT_HANDOFF_PATTERNS:
@@ -187,7 +226,7 @@ def main() -> None:
     print(
         "Skill 编排契约静态校验通过（不代表对话行为已验证）："
         f"{len(formal_names)} 个正式 Skill，"
-        f"{leaf_count} 个叶子 Skill 已使用条件式 /dbs 导航"
+        f"{leaf_count} 个叶子 Skill 只描述能力、不点名其他 Skill"
     )
 
 

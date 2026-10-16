@@ -36,5 +36,21 @@ class RoutingContract(unittest.TestCase):
         self.assertEqual(routing.check_entry_contract(entry, self.composition), [])
 
 
+class LeafMentions(unittest.TestCase):
+    NAMES = ["dbs", "dbs-content", "dbs-content-value", "dbs-save", "dbs-restore"]
+
+    def test_leaf_naming_another_leaf_is_reported(self):
+        found = routing.find_leaf_mentions("dbs-content", "需要评估时用 `dbs-content-value`。", self.NAMES)
+        self.assertEqual(found, [(1, "dbs-content-value")])
+
+    def test_self_hub_and_prefix_are_ignored(self):
+        text = "本 Skill 是 dbs-content，可以输入 `/dbs`，存档在 ~/.dbs/ 下。"
+        self.assertEqual(routing.find_leaf_mentions("dbs-content", text, self.NAMES), [])
+
+    def test_allowed_dependency_is_ignored(self):
+        self.assertEqual(routing.find_leaf_mentions("dbs-restore", "恢复 dbs-save 的存档。", self.NAMES), [])
+        self.assertEqual(routing.find_leaf_mentions("dbs-restore", "再用 dbs-content 写。", self.NAMES), [(1, "dbs-content")])
+
+
 if __name__ == "__main__":
     unittest.main()

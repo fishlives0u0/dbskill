@@ -4,15 +4,15 @@
 
 > 給創業者與內容創作者使用的中文 AI Skills 工具箱。把真實的商業、內容與行動問題交給 Agent，取得清晰判斷與可以立即執行的下一步。
 
-[![Version](https://img.shields.io/badge/version-2.18.50-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.18.51-111111.svg)](VERSION)
 [![Skills](https://img.shields.io/badge/Skills-37-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
 **支援：豆包、WorkBuddy、Claude Code、Codex，以及其他支援 Skills 的 Agent。**
 
-dbskill 由 [dontbesilent](https://x.com/dontbesilent) 建立。方法資料包含從 16,152 則公開貼文整理的 4,176 個知識原子；工具箱提供 34 個現行業務 Skill、2 個舊版相容入口和 1 個系統更新入口。
+dbskill 由 [dontbesilent](https://x.com/dontbesilent) 建立。方法資料包含從 16,152 則公開貼文整理的 4,176 個知識原子；工具箱提供 34 個業務 Skill 和 1 個系統更新入口。
 
-**本次更新：** `/dbs` 直接在目前對話中處理問題，按需組合或對照方法，並明確說明實際使用的 Skill 名稱與分工。
+**本次更新：** 各 Skill 遇到超出範圍的需求時，會說明還需要哪種能力，由 `/dbs` 統一匹配具體 Skill。舊版 `dbs-hook`、`dbs-xhs-title` 已移除，標題、封面文字和影片開頭請使用 `/dbs-title-cover-intro`。
 
 [快速開始](#快速開始) · [安裝](#安裝) · [能力一覽](#能力一覽) · [完整指南](docs/新手入门.md) · [更新紀錄](https://github.com/dontbesilent2025/dbskill/commits/main)
 
@@ -83,7 +83,7 @@ dbskill 由 [dontbesilent](https://x.com/dontbesilent) 建立。方法資料包�
 
 提供本機影片或帶時間戳的 SRT；只有字幕時，還需最終畫布、幀率和總時長。輸出為可匯入剪輯軟體的獨立黑底 MP4，不會自動剪輯或發布原片。Agent 會按內容選擇章節、話題或步驟，檢查布局和時間對應。需要 Python、FFmpeg/ffprobe 和適用字型；macOS 可用 Swift/AppKit，其他環境使用 Pillow 和指定字型。只有影片時另需轉寫工具，雲端轉寫會事先說明服務和上傳範圍。已驗證中文教學影片，其他類型尚未系統性驗證。
 
-標題、封面文字和短影片開頭統一使用 `/dbs-title-cover-intro`。舊 `/dbs-hook` 和 `/dbs-xhs-title` 僅保留供明確呼叫及版本對照。
+標題、封面文字和短影片開頭統一使用 `/dbs-title-cover-intro`。
 
 ## 安裝
 
@@ -106,7 +106,7 @@ claude plugin marketplace add dontbesilent2025/dbskill
 claude plugin install dbs@dontbesilent-skills
 ```
 
-`dbs` 外掛包含 34 個現行業務 Skill、2 個舊版相容入口和 1 個 `dbs-update` 更新入口。Claude Code 的主入口使用 `/dbs:dbs`，具體能力例如 `/dbs:dbs-diagnosis`。
+`dbs` 外掛包含 34 個業務 Skill 和 1 個 `dbs-update` 更新入口。Claude Code 的主入口使用 `/dbs:dbs`，具體能力例如 `/dbs:dbs-diagnosis`。
 
 只想安裝一個能力時，可以在外掛市集中選擇對應外掛，例如 `claude plugin install dbs-diagnosis@dontbesilent-skills`。
 

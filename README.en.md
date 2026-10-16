@@ -4,15 +4,15 @@
 
 > A Chinese AI Skills toolkit for entrepreneurs and content creators. Give your Agent a real business, content, or execution problem, and get a clear judgment plus the next action you can take.
 
-[![Version](https://img.shields.io/badge/version-2.18.50-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.18.51-111111.svg)](VERSION)
 [![Skills](https://img.shields.io/badge/Skills-37-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
 **Supported in Doubao, WorkBuddy, Claude Code, Codex, and other Agents that support Skills.**
 
-Created by [dontbesilent](https://x.com/dontbesilent), dbskill includes 4,176 knowledge atoms drawn from 16,152 public posts. The toolkit provides 34 current business Skills, 2 legacy entries, and 1 system update entry.
+Created by [dontbesilent](https://x.com/dontbesilent), dbskill includes 4,176 knowledge atoms drawn from 16,152 public posts. The toolkit provides 34 business Skills and 1 system update entry.
 
-**This update:** `/dbs` works directly in the current conversation, combines or compares methods when useful, and names the Skills used and their roles.
+**This update:** When a request falls outside a Skill's scope, the Skill now states which capability is still needed, and `/dbs` matches it to a specific Skill. The legacy `dbs-hook` and `dbs-xhs-title` entries have been removed; use `/dbs-title-cover-intro` for titles, cover text, and video openings.
 
 [Quick start](#quick-start) · [Install](#install) · [Capabilities](#capabilities) · [Full guide](docs/新手入门.md) · [Changes](https://github.com/dontbesilent2025/dbskill/commits/main)
 
@@ -83,7 +83,7 @@ See the [full guide and Skill directory](docs/新手入门.md#skill-全目录) f
 
 Provide a local video or timestamped SRT. With subtitles alone, also provide the final canvas, frame rate, and video duration. The output is a separate black-background MP4 for a video editor; the source video is not automatically edited or published. The Agent adapts chapters, topics, or steps to the content and checks placement and timing. Requires Python, FFmpeg/ffprobe, and suitable fonts. macOS can use Swift/AppKit; other environments use Pillow and explicit font paths. Video-only input also requires an available transcription tool; any cloud service and upload scope are explained beforehand. Chinese teaching video production has been verified; other genres have not been systematically evaluated.
 
-Use `/dbs-title-cover-intro` for titles, cover text, and video openings. `/dbs-hook` and `/dbs-xhs-title` are retained only for explicit legacy use or version comparisons.
+Use `/dbs-title-cover-intro` for titles, cover text, and video openings.
 
 ## Install
 
@@ -106,7 +106,7 @@ claude plugin marketplace add dontbesilent2025/dbskill
 claude plugin install dbs@dontbesilent-skills
 ```
 
-The `dbs` plugin includes 34 current business Skills, 2 legacy entries, and the `dbs-update` system entry. Claude Code namespaces plugin Skills: use `/dbs:dbs` for the main entry and `/dbs:dbs-diagnosis` for a specific capability.
+The `dbs` plugin includes 34 business Skills and the `dbs-update` system entry. Claude Code namespaces plugin Skills: use `/dbs:dbs` for the main entry and `/dbs:dbs-diagnosis` for a specific capability.
 
 To install only one capability, choose its marketplace plugin, for example `claude plugin install dbs-diagnosis@dontbesilent-skills`.
 

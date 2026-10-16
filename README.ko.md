@@ -4,15 +4,15 @@
 
 > 창업가와 콘텐츠 제작자를 위한 중국어 AI Skills 도구 상자입니다. 실제 비즈니스, 콘텐츠, 실행 문제를 Agent 에게 전달하면 명확한 판단과 바로 시작할 수 있는 다음 행동을 얻을 수 있습니다.
 
-[![Version](https://img.shields.io/badge/version-2.18.50-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.18.51-111111.svg)](VERSION)
 [![Skills](https://img.shields.io/badge/Skills-37-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
 **豆包, WorkBuddy, Claude Code, Codex 및 Skills 를 지원하는 다른 Agent 에서 사용할 수 있습니다.**
 
-dbskill 은 [dontbesilent](https://x.com/dontbesilent)가 만들었습니다. 공개 게시물 16,152 개에서 정리한 지식 원자 4,176 개를 포함하며, 현재 업무 Skill 34 개, 이전 버전 호환 진입점 2 개, 업데이트 진입점 1 개를 제공합니다.
+dbskill 은 [dontbesilent](https://x.com/dontbesilent)가 만들었습니다. 공개 게시물 16,152 개에서 정리한 지식 원자 4,176 개를 포함하며, 업무 Skill 34 개와 업데이트 진입점 1 개를 제공합니다.
 
-**이번 업데이트:** `/dbs`가 현재 대화에서 바로 작업을 진행하고, 필요에 따라 방법을 조합하거나 비교하며, 사용한 Skill 이름과 역할을 명시합니다.
+**이번 업데이트:** 각 Skill 은 범위를 벗어난 요청을 받으면 아직 필요한 능력을 설명하고, `/dbs` 가 구체적인 Skill 을 연결합니다. 이전 버전의 `dbs-hook` 과 `dbs-xhs-title` 은 삭제되었습니다. 제목, 표지 문구, 영상 도입부에는 `/dbs-title-cover-intro` 를 사용하세요.
 
 [빠른 시작](#빠른-시작) · [설치](#설치) · [기능](#기능-목록) · [전체 가이드](docs/新手入门.md) · [변경 내역](https://github.com/dontbesilent2025/dbskill/commits/main)
 
@@ -83,7 +83,7 @@ dbskill 은 [dontbesilent](https://x.com/dontbesilent)가 만들었습니다. �
 
 로컬 영상이나 타임스탬프가 있는 SRT 를 제공하세요. 자막만 있다면 최종 화면 크기, 프레임률, 영상 전체 길이도 필요합니다. 결과는 편집기에 가져올 수 있는 검은 배경의 독립 MP4 입니다. 원본 영상을 자동으로 편집하거나 게시하지 않습니다. Agent 가 내용에 맞춰 장·주제·단계를 정하고 배치와 시간을 확인합니다. Python, FFmpeg/ffprobe, 적절한 글꼴이 필요합니다. macOS 는 Swift/AppKit 을, 다른 환경은 Pillow 와 지정 글꼴을 사용할 수 있습니다. 영상만 제공하면 전사 도구도 필요하며, 클라우드를 쓸 때는 서비스와 업로드 범위를 먼저 안내합니다. 중국어 강의 영상 제작은 검증했으나 다른 유형은 체계적으로 평가하지 않았습니다.
 
-제목, 표지 문구, 영상 도입부에는 `/dbs-title-cover-intro` 를 사용하세요. `/dbs-hook` 과 `/dbs-xhs-title` 은 이전 버전을 명시적으로 호출하거나 비교할 때만 사용합니다.
+제목, 표지 문구, 영상 도입부에는 `/dbs-title-cover-intro` 를 사용하세요.
 
 ## 설치
 
@@ -106,7 +106,7 @@ claude plugin marketplace add dontbesilent2025/dbskill
 claude plugin install dbs@dontbesilent-skills
 ```
 
-`dbs` 플러그인에는 현재 업무 Skill 34 개, 이전 버전 호환 진입점 2 개, 업데이트용 `dbs-update` 가 포함됩니다. Claude Code 에서는 주 진입점에 `/dbs:dbs`, 개별 기능에 `/dbs:dbs-diagnosis` 등을 사용합니다.
+`dbs` 플러그인에는 업무 Skill 34 개와 업데이트용 `dbs-update` 가 포함됩니다. Claude Code 에서는 주 진입점에 `/dbs:dbs`, 개별 기능에 `/dbs:dbs-diagnosis` 등을 사용합니다.
 
 기능 하나만 설치하려면 해당 마켓플레이스 플러그인을 선택하세요. 예: `claude plugin install dbs-diagnosis@dontbesilent-skills`
 
