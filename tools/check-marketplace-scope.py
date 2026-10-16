@@ -14,20 +14,21 @@ LOCAL_REGISTRY_PATH = ROOT_DIR / ".dbs-local" / "custom-skills.json"
 
 
 def published_skill_dirs() -> list[str]:
-    result = subprocess.run(
-        ["git", "ls-files", "--cached", "--", "skills/*/SKILL.md"],
-        cwd=ROOT_DIR,
-        capture_output=True,
-        text=True,
-        check=False,
-    )
-    if result.returncode == 0:
-        paths = [Path(line) for line in result.stdout.splitlines() if line]
-    else:
-        paths = list((ROOT_DIR / "skills").glob("*/SKILL.md"))
+    """Return public Skill directories that exist in the post-sync working tree.
+
+    The sync workflow can remove upstream-retired Skill files from the working
+    tree while Git's index still contains those paths as deleted entries.
+    Integrity checks run after the mirror step, so the final working tree is
+    the correct source for the published Skill set.
+    """
+    skills_root = ROOT_DIR / "skills"
+    if not skills_root.is_dir():
+        return []
 
     return sorted(
-        path.parent.name for path in paths if "beta" not in path.parent.name
+        path.parent.name
+        for path in skills_root.glob("*/SKILL.md")
+        if path.is_file() and "beta" not in path.parent.name
     )
 
 
