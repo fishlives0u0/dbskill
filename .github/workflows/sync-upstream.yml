@@ -1,6 +1,11 @@
 name: Sync upstream DBS and keep local skills
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'tools/check-marketplace-scope.py'
   workflow_dispatch:
   schedule:
     - cron: '17 * * * *'
