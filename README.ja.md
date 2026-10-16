@@ -4,7 +4,7 @@
 
 > 起業家とコンテンツ制作者のための中国語 AI Skills ツールキット。ビジネス、コンテンツ、実行に関する現実の課題を Agent に渡し、明確な判断と次の具体的な行動を得られます。
 
-[![Version](https://img.shields.io/badge/version-2.18.51-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.20.0-111111.svg)](VERSION)
 [![Skills](https://img.shields.io/badge/Skills-37-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
@@ -12,7 +12,7 @@
 
 dbskill は [dontbesilent](https://x.com/dontbesilent) が作成しました。公開投稿 16,152 件から整理した 4,176 件の知識原子を含み、業務 Skill 34 個と更新エントリ 1 個を提供します。
 
-**今回の更新：** 各 Skill は対応範囲外の依頼を受けたとき、まだ必要な能力を説明し、`/dbs` が具体的な Skill を選びます。旧版の `dbs-hook` と `dbs-xhs-title` は削除しました。タイトル、表紙の文字、動画の冒頭には `/dbs-title-cover-intro` を使用してください。
+**今回の更新：** ビジネス診断、ベンチマーク分析、実行力診断、概念の分解、良い問いの 5 つの Skill は、すでに提供された材料をもとに進め、結論を変える事実が欠けているときだけ質問します。各ステップで返答を待つことはなくなりました。
 
 [クイックスタート](#クイックスタート) · [インストール](#インストール) · [機能](#機能一覧) · [完全ガイド](docs/新手入门.md) · [変更履歴](https://github.com/dontbesilent2025/dbskill/commits/main)
 
@@ -121,6 +121,17 @@ claude plugin install dbs@dontbesilent-skills
 ```
 
 公式 dbskill を同期します。`~/.dbs/` 内の記録、レポート、意思決定データは変更しません。変更内容は [コミット履歴](https://github.com/dontbesilent2025/dbskill/commits/main) を参照してください。
+
+更新時には、公開を終了した旧エントリ（現在は `dbs-hook` と `dbs-xhs-title`）も整理します。公式版と一致するコピーだけを対象とし、元のファイルは `~/.dbs/retired-skills/` にバックアップします。ご自身で変更した同名の Skill は残します。
+
+更新エントリを使わずに手動で整理する場合、Claude Code プラグインの利用者は次を実行します。
+
+```bash
+claude plugin uninstall dbs-hook@dontbesilent-skills
+claude plugin uninstall dbs-xhs-title@dontbesilent-skills
+```
+
+その他の Agent では、各 Skill ディレクトリ（例：`~/.agents/skills/`）からこの 2 つのフォルダを削除してください。
 
 ## 仕組み
 

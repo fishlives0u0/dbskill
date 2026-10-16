@@ -4,7 +4,7 @@
 
 > A Chinese AI Skills toolkit for entrepreneurs and content creators. Give your Agent a real business, content, or execution problem, and get a clear judgment plus the next action you can take.
 
-[![Version](https://img.shields.io/badge/version-2.18.51-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.20.0-111111.svg)](VERSION)
 [![Skills](https://img.shields.io/badge/Skills-37-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
@@ -12,7 +12,7 @@
 
 Created by [dontbesilent](https://x.com/dontbesilent), dbskill includes 4,176 knowledge atoms drawn from 16,152 public posts. The toolkit provides 34 business Skills and 1 system update entry.
 
-**This update:** When a request falls outside a Skill's scope, the Skill now states which capability is still needed, and `/dbs` matches it to a specific Skill. The legacy `dbs-hook` and `dbs-xhs-title` entries have been removed; use `/dbs-title-cover-intro` for titles, cover text, and video openings.
+**This update:** Business diagnosis, benchmarking, execution diagnosis, concept deconstruction, and good-question Skills now work from the material you have already provided and ask only when a missing fact would change the conclusion, instead of pausing for a reply at every step.
 
 [Quick start](#quick-start) · [Install](#install) · [Capabilities](#capabilities) · [Full guide](docs/新手入门.md) · [Changes](https://github.com/dontbesilent2025/dbskill/commits/main)
 
@@ -121,6 +121,17 @@ Ask your current Agent:
 ```
 
 This syncs the official dbskill and does not modify records, reports, or decisions under `~/.dbs/`. See the [commit history](https://github.com/dontbesilent2025/dbskill/commits/main) for changes.
+
+Updating also cleans up retired entries, currently `dbs-hook` and `dbs-xhs-title`. Only copies that match an official version are removed, and originals are backed up under `~/.dbs/retired-skills/`; same-name Skills you have modified are kept.
+
+To clean up manually without the update entry, Claude Code plugin users run:
+
+```bash
+claude plugin uninstall dbs-hook@dontbesilent-skills
+claude plugin uninstall dbs-xhs-title@dontbesilent-skills
+```
+
+For other Agents, delete these two folders from the Agent's Skill directory, such as `~/.agents/skills/`.
 
 ## How it works
 

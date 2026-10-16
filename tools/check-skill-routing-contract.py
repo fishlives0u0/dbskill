@@ -56,8 +56,8 @@ CONDITIONAL_NAVIGATION_MARKER = "不点名其他 Skill"
 # 以下点名属于工具依赖、共用存档格式或用法示例，新增 Skill 时无需修改。
 ALLOWED_LEAF_MENTIONS = {
     "dbs-save": {"dbs-restore", "dbs-report", "dbs-diagnosis", "dbs-benchmark"},
-    "dbs-restore": {"dbs-save"},
-    "dbs-report": {"dbs-save", "dbs-diagnosis"},
+    "dbs-restore": {"dbs-save", "dbs-report"},
+    "dbs-report": {"dbs-save", "dbs-restore", "dbs-diagnosis"},
     "dbs-agent-migration": {"dbs-install-skill"},
     "dbs-skill-maker": {"dbs-install-skill"},
     "dbs-install-skill": {"dbs-diagnosis"},
@@ -151,11 +151,11 @@ def main() -> None:
                     )
                     break
 
-    save_text = (ROOT_DIR / "skills" / "dbs-save" / "SKILL.md").read_text(
-        encoding="utf-8"
-    )
-    if "只有用户已经明确选择下一个 Skill" not in save_text:
-        errors.append("dbs-save 的 next_skill 字段缺少「用户明确选择」约束")
+    archive_contract_text = (
+        ROOT_DIR / "shared" / "references" / "archive-contract.md"
+    ).read_text(encoding="utf-8")
+    if "只有用户已经明确选择下一个 Skill" not in archive_contract_text:
+        errors.append("存档契约的 next_skill 字段缺少「用户明确选择」约束")
 
     restore_text = (ROOT_DIR / "skills" / "dbs-restore" / "SKILL.md").read_text(
         encoding="utf-8"

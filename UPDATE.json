@@ -1,5 +1,5 @@
 {
-  "version": "2.18.51",
-  "notice": "各 Skill 遇到超出范围的需求时说明还需要哪种能力，由 /dbs 统一匹配具体 Skill",
+  "version": "2.20.0",
+  "notice": "商业诊断、对标、执行力、概念拆解和好问题五个 Skill 会先用你给的材料推进，只在缺关键事实时提问",
   "details_url": "https://github.com/dontbesilent2025/dbskill/commits/main"
 }

@@ -4,13 +4,13 @@
 
 dbskill 是 dontbesilent 的中文 AI Skills 工具箱，包含商业判断、内容创作、行动决策、学习和知识管理等能力，可安装到支持 Skills 的 Agent 中使用
 
-[![Version](https://img.shields.io/badge/version-2.18.51-2563EB.svg?style=flat-square)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.20.0-2563EB.svg?style=flat-square)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-16A34A.svg?style=flat-square)](LICENSE)
 
 支持豆包、WorkBuddy、Claude Code、Codex 和其他兼容 Skills 的 Agent。项目方法资料从 16,152 条公开推文中筛选整理，包含 4,176 个结构化知识原子。作者：[@dontbesilent](https://x.com/dontbesilent)
 
-**本次更新：** 各 Skill 遇到超出范围的需求时，会说明还需要哪种能力，由 `/dbs` 统一匹配具体 Skill。旧版 `dbs-hook`、`dbs-xhs-title` 已移除，标题、封面文字和视频开头请使用 `/dbs-title-cover-intro`。
+**本次更新：** 商业诊断、对标分析、执行力诊断、概念拆解和好问题这五个 Skill 改为先用你已经给出的材料推进，只在缺少会改变结论的事实时提问，不再每一步都停下来等回复。
 
 ## 目录
 
@@ -218,6 +218,17 @@ claude plugin install dbs-diagnosis@dontbesilent-skills
 ```
 
 系统更新入口会同步官方 dbskill，并保留 `~/.dbs/` 中的存档、报告和决策记录。也可以查看[更新记录](https://github.com/dontbesilent2025/dbskill/commits/main)
+
+更新时会顺带清理已下线的旧入口，目前是 `dbs-hook` 和 `dbs-xhs-title`。只有能确认来自官方的副本才会被清理，原文件备份在 `~/.dbs/retired-skills/`；你自己改过的同名 Skill 会保留。
+
+不通过更新入口时，可以手动清理。Claude Code 插件用户运行：
+
+```bash
+claude plugin uninstall dbs-hook@dontbesilent-skills
+claude plugin uninstall dbs-xhs-title@dontbesilent-skills
+```
+
+其他 Agent 在各自的 Skill 目录（例如 `~/.agents/skills/`）中删除这两个文件夹。
 
 ### 获取帮助
 
