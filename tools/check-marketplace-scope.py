@@ -21,6 +21,7 @@ def published_skill_dirs() -> list[str]:
     Integrity checks run after the mirror step, so the final working tree is
     the correct source for the published Skill set.
     """
+    # This check runs after rsync has produced the final synchronized tree.
     skills_root = ROOT_DIR / "skills"
     if not skills_root.is_dir():
         return []
