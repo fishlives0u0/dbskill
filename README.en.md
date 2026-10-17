@@ -4,7 +4,7 @@
 
 > A Chinese AI Skills toolkit for entrepreneurs and content creators. Give your Agent a real business, content, or execution problem, and get a clear judgment plus the next action you can take.
 
-[![Version](https://img.shields.io/badge/version-2.20.0-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.21.0-111111.svg)](VERSION)
 [![Skills](https://img.shields.io/badge/Skills-37-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
@@ -12,7 +12,7 @@
 
 Created by [dontbesilent](https://x.com/dontbesilent), dbskill includes 4,176 knowledge atoms drawn from 16,152 public posts. The toolkit provides 34 business Skills and 1 system update entry.
 
-**This update:** Business diagnosis, benchmarking, execution diagnosis, concept deconstruction, and good-question Skills now work from the material you have already provided and ask only when a missing fact would change the conclusion, instead of pausing for a reply at every step.
+**This update:** `/dbs-title-cover-intro` now starts by agreeing on the topic with you: it offers up to 4 topics aimed at audiences of different sizes, each with a sample title, and asks for experience or numbers that make viewers trust you. After you choose, it delivers titles, cover text, and the opening for Xiaohongshu, Bilibili, Douyin, and WeChat Channels on one screen.
 
 [Quick start](#quick-start) · [Install](#install) · [Capabilities](#capabilities) · [Full guide](docs/新手入门.md) · [Changes](https://github.com/dontbesilent2025/dbskill/commits/main)
 

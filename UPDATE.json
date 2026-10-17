@@ -1,5 +1,5 @@
 {
-  "version": "2.20.0",
-  "notice": "商业诊断、对标、执行力、概念拆解和好问题五个 Skill 会先用你给的材料推进，只在缺关键事实时提问",
+  "version": "2.21.0",
+  "notice": "标题封面开头改为先和你定选题：给出最多 4 个面向不同人群的选题，选定后一屏交付四平台标题、封面文字和开头",
   "details_url": "https://github.com/dontbesilent2025/dbskill/commits/main"
 }

@@ -4,7 +4,7 @@
 
 > 창업가와 콘텐츠 제작자를 위한 중국어 AI Skills 도구 상자입니다. 실제 비즈니스, 콘텐츠, 실행 문제를 Agent 에게 전달하면 명확한 판단과 바로 시작할 수 있는 다음 행동을 얻을 수 있습니다.
 
-[![Version](https://img.shields.io/badge/version-2.20.0-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.21.0-111111.svg)](VERSION)
 [![Skills](https://img.shields.io/badge/Skills-37-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
@@ -12,7 +12,7 @@
 
 dbskill 은 [dontbesilent](https://x.com/dontbesilent)가 만들었습니다. 공개 게시물 16,152 개에서 정리한 지식 원자 4,176 개를 포함하며, 업무 Skill 34 개와 업데이트 진입점 1 개를 제공합니다.
 
-**이번 업데이트:** 비즈니스 진단, 벤치마크 분석, 실행력 진단, 개념 분해, 좋은 질문 5 개 Skill 은 이미 제공한 자료로 먼저 진행하고, 결론을 바꿀 사실이 빠졌을 때만 질문합니다. 단계마다 답을 기다리지 않습니다.
+**이번 업데이트:** `/dbs-title-cover-intro` 는 먼저 함께 주제를 정합니다. 원고를 바탕으로 대상 범위가 다른 주제를 최대 4 개, 제목 예시와 함께 제시하고, 시청자가 믿을 수 있는 경험이나 숫자를 묻습니다. 선택한 뒤에는 샤오홍슈, 빌리빌리, 더우인, 위챗 채널용 제목, 표지 문구, 도입부를 한 화면으로 전달합니다.
 
 [빠른 시작](#빠른-시작) · [설치](#설치) · [기능](#기능-목록) · [전체 가이드](docs/新手入门.md) · [변경 내역](https://github.com/dontbesilent2025/dbskill/commits/main)
 

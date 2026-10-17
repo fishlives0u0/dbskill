@@ -4,7 +4,7 @@
 
 > 給創業者與內容創作者使用的中文 AI Skills 工具箱。把真實的商業、內容與行動問題交給 Agent，取得清晰判斷與可以立即執行的下一步。
 
-[![Version](https://img.shields.io/badge/version-2.20.0-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.21.0-111111.svg)](VERSION)
 [![Skills](https://img.shields.io/badge/Skills-37-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
@@ -12,7 +12,7 @@
 
 dbskill 由 [dontbesilent](https://x.com/dontbesilent) 建立。方法資料包含從 16,152 則公開貼文整理的 4,176 個知識原子；工具箱提供 34 個業務 Skill 和 1 個系統更新入口。
 
-**本次更新：** 商業診斷、對標分析、執行力診斷、概念拆解和好問題這五個 Skill 改為先用你已經提供的材料推進，只在缺少會改變結論的事實時提問，不再每一步都停下來等回覆。
+**本次更新：** `/dbs-title-cover-intro` 改為先和你確定選題：根據稿子給出最多 4 個面向不同人群的選題，附標題示例，並詢問能讓觀眾相信你的經歷或數字；選定後一次交付小紅書、B 站、抖音、視頻號的標題、封面文字和開頭。
 
 [快速開始](#快速開始) · [安裝](#安裝) · [能力一覽](#能力一覽) · [完整指南](docs/新手入门.md) · [更新紀錄](https://github.com/dontbesilent2025/dbskill/commits/main)
 

@@ -180,7 +180,7 @@ Trae Solo 一个 zip 装一个 skill。本压缩包按使用场景分了几个�
 - **dbs-content** — 内容创作诊断
 - **dbs-content-risk-check** — 内容发布风险检查（区分机器审核信号与内容实质问题，给出最小修改动作）
 - **dbs-benchmark** — 对标分析
-- **dbs-title-cover-intro** — 根据稿件与拍摄状态生成标题、封面和视频开头
+- **dbs-title-cover-intro** — 先定选题，再按拍摄状态生成标题、封面文字和视频开头
 - **dbs-ai-check** — AI 写作特征识别
 - **dbs-wechat-html** — 微信公众号 HTML 生成（15 种经典风格，支持预览和全量生成）
 - **dbs-spread** — 传播心理解码
