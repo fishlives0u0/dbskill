@@ -4,13 +4,13 @@
 
 > A Chinese AI Skills toolkit for entrepreneurs and content creators. Give your Agent a real business, content, or execution problem, and get a clear judgment plus the next action you can take.
 
-[![Version](https://img.shields.io/badge/version-2.21.0-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.22.0-111111.svg)](VERSION)
 [![Skills](https://img.shields.io/badge/Skills-37-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
 **Supported in Doubao, WorkBuddy, Claude Code, Codex, and other Agents that support Skills.**
 
-Created by [dontbesilent](https://x.com/dontbesilent), dbskill includes 4,176 knowledge atoms drawn from 16,152 public posts. The toolkit provides 34 business Skills and 1 system update entry.
+Created by [dontbesilent](https://x.com/dontbesilent), dbskill includes 4,176 knowledge atoms drawn from 16,152 public posts. The toolkit provides 35 business Skills and 1 system update entry.
 
 **This update:** `/dbs-title-cover-intro` now starts by agreeing on the topic with you: it offers up to 4 topics aimed at audiences of different sizes, each with a sample title, and asks for experience or numbers that make viewers trust you. After you choose, it delivers titles, cover text, and the opening for Xiaohongshu, Bilibili, Douyin, and WeChat Channels on one screen.
 
@@ -106,7 +106,7 @@ claude plugin marketplace add dontbesilent2025/dbskill
 claude plugin install dbs@dontbesilent-skills
 ```
 
-The `dbs` plugin includes 34 business Skills and the `dbs-update` system entry. Claude Code namespaces plugin Skills: use `/dbs:dbs` for the main entry and `/dbs:dbs-diagnosis` for a specific capability.
+The `dbs` plugin includes 35 business Skills and the `dbs-update` system entry. Claude Code namespaces plugin Skills: use `/dbs:dbs` for the main entry and `/dbs:dbs-diagnosis` for a specific capability.
 
 To install only one capability, choose its marketplace plugin, for example `claude plugin install dbs-diagnosis@dontbesilent-skills`.
 

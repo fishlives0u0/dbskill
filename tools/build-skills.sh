@@ -23,7 +23,7 @@ group_for() {
       echo "必装入口" ;;
     dbs-diagnosis|dbs-standard-answer|dbs-theory-grounding|dbs-deconstruct|dbs-goal|dbs-good-question|dbs-jtbd|dbs-action)
       echo "看商业问题" ;;
-    dbs-content|dbs-content-value|dbs-video-navigation|dbs-content-risk-check|dbs-benchmark|dbs-title-cover-intro|dbs-ai-check|dbs-wechat-html|dbs-spread|dbs-resonate|dbs-script-flow|dbs-video-extract)
+    dbs-content|dbs-content-value|dbs-video-navigation|dbs-content-risk-check|dbs-benchmark|dbs-title-cover-intro|dbs-ai-check|dbs-plain-writing|dbs-wechat-html|dbs-spread|dbs-resonate|dbs-script-flow|dbs-video-extract)
       echo "做内容" ;;
     dbs-content-system)
       echo "进阶-内容工程" ;;
@@ -182,6 +182,7 @@ Trae Solo 一个 zip 装一个 skill。本压缩包按使用场景分了几个�
 - **dbs-benchmark** — 对标分析
 - **dbs-title-cover-intro** — 先定选题，再按拍摄状态生成标题、封面文字和视频开头
 - **dbs-ai-check** — AI 写作特征识别
+- **dbs-plain-writing** — 平铺直叙写作（按事实顺序写产品、功能和更新说明，检查措辞歧义）
 - **dbs-wechat-html** — 微信公众号 HTML 生成（15 种经典风格，支持预览和全量生成）
 - **dbs-spread** — 传播心理解码
 - **dbs-resonate** — 文稿共鸣诊断

@@ -4,15 +4,15 @@
 
 > 給創業者與內容創作者使用的中文 AI Skills 工具箱。把真實的商業、內容與行動問題交給 Agent，取得清晰判斷與可以立即執行的下一步。
 
-[![Version](https://img.shields.io/badge/version-2.21.0-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.22.0-111111.svg)](VERSION)
 [![Skills](https://img.shields.io/badge/Skills-37-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
 **支援：豆包、WorkBuddy、Claude Code、Codex，以及其他支援 Skills 的 Agent。**
 
-dbskill 由 [dontbesilent](https://x.com/dontbesilent) 建立。方法資料包含從 16,152 則公開貼文整理的 4,176 個知識原子；工具箱提供 34 個業務 Skill 和 1 個系統更新入口。
+dbskill 由 [dontbesilent](https://x.com/dontbesilent) 建立。方法資料包含從 16,152 則公開貼文整理的 4,176 個知識原子；工具箱提供 35 個業務 Skill 和 1 個系統更新入口。
 
-**本次更新：** `/dbs-title-cover-intro` 改為先和你確定選題：根據稿子給出最多 4 個面向不同人群的選題，附標題示例，並詢問能讓觀眾相信你的經歷或數字；選定後一次交付小紅書、B 站、抖音、視頻號的標題、封面文字和開頭。
+**本次更新：** 新增 `/dbs-plain-writing`（平鋪直敘寫作）：按事實與功能順序撰寫、改寫或檢查產品、功能、專案和更新說明，內建 ASD-STE100 清晰表達原則，核對主體、指代、條件和承諾強度，不加行銷鉤子，並保留你鎖定的文字。
 
 [快速開始](#快速開始) · [安裝](#安裝) · [能力一覽](#能力一覽) · [完整指南](docs/新手入门.md) · [更新紀錄](https://github.com/dontbesilent2025/dbskill/commits/main)
 
@@ -106,7 +106,7 @@ claude plugin marketplace add dontbesilent2025/dbskill
 claude plugin install dbs@dontbesilent-skills
 ```
 
-`dbs` 外掛包含 34 個業務 Skill 和 1 個 `dbs-update` 更新入口。Claude Code 的主入口使用 `/dbs:dbs`，具體能力例如 `/dbs:dbs-diagnosis`。
+`dbs` 外掛包含 35 個業務 Skill 和 1 個 `dbs-update` 更新入口。Claude Code 的主入口使用 `/dbs:dbs`，具體能力例如 `/dbs:dbs-diagnosis`。
 
 只想安裝一個能力時，可以在外掛市集中選擇對應外掛，例如 `claude plugin install dbs-diagnosis@dontbesilent-skills`。
 

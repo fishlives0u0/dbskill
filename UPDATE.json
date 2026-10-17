@@ -1,5 +1,5 @@
 {
-  "version": "2.21.0",
-  "notice": "标题封面开头改为先和你定选题：给出最多 4 个面向不同人群的选题，选定后一屏交付四平台标题、封面文字和开头",
+  "version": "2.22.0",
+  "notice": "新增「平铺直叙写作」：按事实顺序写产品、功能和更新说明，检查措辞歧义，并保留原意和你锁定的文字。",
   "details_url": "https://github.com/dontbesilent2025/dbskill/commits/main"
 }

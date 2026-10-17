@@ -4,13 +4,13 @@
 
 > 起業家とコンテンツ制作者のための中国語 AI Skills ツールキット。ビジネス、コンテンツ、実行に関する現実の課題を Agent に渡し、明確な判断と次の具体的な行動を得られます。
 
-[![Version](https://img.shields.io/badge/version-2.21.0-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.22.0-111111.svg)](VERSION)
 [![Skills](https://img.shields.io/badge/Skills-37-111111.svg)](docs/新手入门.md#skill-全目录)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
 **豆包、WorkBuddy、Claude Code、Codex、および Skills に対応する他の Agent で利用できます。**
 
-dbskill は [dontbesilent](https://x.com/dontbesilent) が作成しました。公開投稿 16,152 件から整理した 4,176 件の知識原子を含み、業務 Skill 34 個と更新エントリ 1 個を提供します。
+dbskill は [dontbesilent](https://x.com/dontbesilent) が作成しました。公開投稿 16,152 件から整理した 4,176 件の知識原子を含み、業務 Skill 35 個と更新エントリ 1 個を提供します。
 
 **今回の更新：** `/dbs-title-cover-intro` は、まずあなたと一緒にテーマを決めるようになりました。原稿から対象の広さが異なる最大 4 つのテーマをタイトル例付きで提示し、視聴者の信頼につながる経験や数字を尋ねます。選んだ後、小紅書・B 站・抖音・視頻号向けのタイトル、表紙の文字、冒頭を 1 画面で届けます。
 
@@ -106,7 +106,7 @@ claude plugin marketplace add dontbesilent2025/dbskill
 claude plugin install dbs@dontbesilent-skills
 ```
 
-`dbs` プラグインには業務 Skill 34 個と更新用の `dbs-update` が含まれます。Claude Code ではメイン入口に `/dbs:dbs`、個別機能に `/dbs:dbs-diagnosis` などを使用します。
+`dbs` プラグインには業務 Skill 35 個と更新用の `dbs-update` が含まれます。Claude Code ではメイン入口に `/dbs:dbs`、個別機能に `/dbs:dbs-diagnosis` などを使用します。
 
 機能を 1 つだけインストールする場合は、対応するプラグインを選択します。例：`claude plugin install dbs-diagnosis@dontbesilent-skills`
 

@@ -4,13 +4,13 @@
 
 dbskill 是 dontbesilent 的中文 AI Skills 工具箱，包含商业判断、内容创作、行动决策、学习和知识管理等能力，可安装到支持 Skills 的 Agent 中使用
 
-[![Version](https://img.shields.io/badge/version-2.21.0-2563EB.svg?style=flat-square)](VERSION)
+[![Version](https://img.shields.io/badge/version-2.22.0-2563EB.svg?style=flat-square)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-16A34A.svg?style=flat-square)](LICENSE)
 
 支持豆包、WorkBuddy、Claude Code、Codex 和其他兼容 Skills 的 Agent。项目方法资料从 16,152 条公开推文中筛选整理，包含 4,176 个结构化知识原子。作者：[@dontbesilent](https://x.com/dontbesilent)
 
-**本次更新：** `/dbs-title-cover-intro` 改为先和你定选题：根据稿子给出最多 4 个面向不同人群的选题，附标题示例，并问你能让观众相信你的经历或数字；选定后一屏交付小红书、B 站、抖音、视频号的标题、封面文字和开头。
+**本次更新：** 新增 `/dbs-plain-writing`（平铺直叙写作）：按事实与功能顺序撰写、改写或检查产品、功能、项目和更新说明，内置 ASD-STE100 清晰表达原则，核对主体、指代、条件和承诺强度，不加营销钩子，并保留你锁定的文字。
 
 ## 目录
 
@@ -188,6 +188,7 @@ claude plugin install dbs-diagnosis@dontbesilent-skills
 | 澄清复杂需求或用户购买动机 | [`/dbs-good-question`](skills/dbs-good-question/SKILL.md)、[`/dbs-jtbd`](skills/dbs-jtbd/SKILL.md) | 把模糊问题说清楚，分析用户想完成的任务 |
 | 把选题发展成内容 | [`/dbs-content`](skills/dbs-content/SKILL.md) | 设计内容结构、论证和表达方案 |
 | 检查已写好的稿件 | [`/dbs-resonate`](skills/dbs-resonate/SKILL.md)、[`/dbs-script-flow`](skills/dbs-script-flow/SKILL.md) | 检查受众共鸣、段落衔接和表达流畅度 |
+| 写产品、功能或更新说明 | [`/dbs-plain-writing`](skills/dbs-plain-writing/SKILL.md) | 按事实顺序逐项写清，检查措辞歧义，不加营销包装 |
 | 设计标题、封面文字和短视频开头 | [`/dbs-title-cover-intro`](skills/dbs-title-cover-intro/SKILL.md) | 先和你定选题，再按拍摄状态生成四平台标题、封面文字和开头 |
 | 提取短视频数据或语音文字稿 | [`/dbs-video-extract`](skills/dbs-video-extract/SKILL.md) | 根据平台链接获取作品信息和转写内容；部分功能需要外部服务凭证 |
 | 为本地视频添加章节导航 | [`/dbs-video-navigation`](skills/dbs-video-navigation/SKILL.md) | 根据视频或带时间戳字幕生成章节导航和进度条 |
