@@ -27,7 +27,6 @@
     "./skills/dbs-install-skill",
     "./skills/dbs-skill-maker",
     "./skills/dbs-human-dispatch",
-    "./skills/dbs-agent-migration",
     "./skills/dbs-save",
     "./skills/dbs-restore",
     "./skills/dbs-report",

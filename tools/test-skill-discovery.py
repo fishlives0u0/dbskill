@@ -38,6 +38,12 @@ class Discovery(unittest.TestCase):
             (roots[0]/'sample/SKILL.md').write_text('---\nname: other\ndescription: test\n---\n')
             self.assertEqual(m.locate_installed_skill('sample', roots), (roots[1]/'sample').resolve())
 
+    def test_handoff_field(self):
+        handoff = m.read_frontmatter_handoff(ROOT/'skills/dbs-title-cover-intro/SKILL.md')
+        self.assertIn('→', handoff)
+        self.assertTrue(handoff.splitlines()[-1].startswith('- 不交出：'))
+        self.assertEqual(m.read_frontmatter_handoff(ROOT/'skills/dbs/SKILL.md'), '')
+
     def test_multiline_description(self):
         self.assertIn('理论溯源', m.read_frontmatter_description(ROOT/'skills/dbs-theory-grounding/SKILL.md'))
 

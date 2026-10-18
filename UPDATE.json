@@ -1,5 +1,5 @@
 {
-  "version": "2.22.0",
-  "notice": "新增「平铺直叙写作」：按事实顺序写产品、功能和更新说明，检查措辞歧义，并保留原意和你锁定的文字。",
+  "version": "3.0.1",
+  "notice": "README 重写：开头先说能做什么，新增 /dbs 安排 Skill 的 6 种方式和例子，并按任务列出全部 34 个 Skill",
   "details_url": "https://github.com/dontbesilent2025/dbskill/commits/main"
 }

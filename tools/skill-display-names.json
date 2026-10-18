@@ -1,7 +1,7 @@
 {
   "version": 1,
   "names": {
-    "dbs": "Skill 导航",
+    "dbs": "技能调度台",
     "dbs-update": "更新 dbskill",
     "dbs-diagnosis": "商业诊断",
     "dbs-benchmark": "对标分析",
@@ -22,9 +22,8 @@
     "dbs-ai-check": "AI 写作特征检查",
     "dbs-wechat-html": "公众号排版",
     "dbs-install-skill": "Skill 安装管理",
-    "dbs-skill-maker": "Skill 制作",
+    "dbs-skill-maker": "Skill 制作与改进",
     "dbs-human-dispatch": "协作任务派发",
-    "dbs-agent-migration": "多端 Agent 配置迁移",
     "dbs-save": "诊断存档",
     "dbs-restore": "继续上次诊断",
     "dbs-report": "诊断报告汇总",

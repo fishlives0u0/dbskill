@@ -17,13 +17,22 @@ OFFICIAL_NAMES_PATH = (
 ROUTING_CONTRACT_MARKER = "## 跨 Skill 交接契约"
 ENTRY_MARKERS = (
     "## 模式 B：任务编排与执行",
-    "### 2．选择当前最有价值的下一步",
-    "### 4．在当前对话中执行",
-    "### 5．根据反馈继续或调整",
+    "### 1．解读任务",
+    "### 2．设计组合",
+    "#### 动态拆解",
+    "### 3．向用户说明组合",
+    "### 4．执行与调整",
     "scripts/list-official-skills.py",
     "references/composition-contract.md",
 )
-COMPOSITION_MARKERS = ("## 二、互补组合", "## 三、对照尝试", "## 四、停止与调整")
+COMPOSITION_MARKERS = (
+    "## 二、动态拆解",
+    "## 三、流程结构",
+    "## 四、合并方式",
+    "### 隔离对照",
+    "## 六、交接包",
+    "## 七、停止与调整",
+)
 # 防止重新引入已经移除的全局强制暂停与单一结论约束。
 # 此处检查明确的旧指令，不能替代模型行为测试。
 RETIRED_ENTRY_RULES = (
@@ -58,7 +67,6 @@ ALLOWED_LEAF_MENTIONS = {
     "dbs-save": {"dbs-restore", "dbs-report", "dbs-diagnosis", "dbs-benchmark"},
     "dbs-restore": {"dbs-save", "dbs-report"},
     "dbs-report": {"dbs-save", "dbs-restore", "dbs-diagnosis"},
-    "dbs-agent-migration": {"dbs-install-skill"},
     "dbs-skill-maker": {"dbs-install-skill"},
     "dbs-install-skill": {"dbs-diagnosis"},
     "dbs-update": {"dbs-diagnosis"},

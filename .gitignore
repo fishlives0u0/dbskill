@@ -38,6 +38,8 @@ skills/dbs-beta-*/
 # private skill：长期仅限本地，不发 GitHub
 skills/dbs-private-*/
 /dbs-private-*
+skills/dbs/references/local.md
+skills/dbs/scripts/list-local-skills.py
 
 # 本机桥接与 Python 缓存
 scripts/setup-symlinks.sh

@@ -35,7 +35,7 @@ group_for() {
       echo "进阶-状态管理" ;;
     dbs-decision)
       echo "进阶-决策系统" ;;
-    dbs-agent-migration|dbs-install-skill|dbs-skill-maker)
+    dbs-install-skill|dbs-skill-maker)
       echo "进阶-Agent基建" ;;
     dbs-learning)
       echo "进阶-学习" ;;
@@ -161,7 +161,7 @@ Trae Solo 一个 zip 装一个 skill。本压缩包按使用场景分了几个�
 
 ## 必装入口
 
-- **dbs** — 主入口，根据你的问题自动路由到合适的诊断 skill。其他 skill 都依赖它，先装这个。
+- **dbs** — 技能调度台，根据你的问题自动路由到合适的诊断 skill。其他 skill 都依赖它，先装这个。
 - **dbs-update** — 更新 dbskill。安装后直接对 Agent 说「更新 dbskill」。
 
 ## 看商业问题
@@ -215,9 +215,8 @@ Trae Solo 一个 zip 装一个 skill。本压缩包按使用场景分了几个�
 
 ## 进阶-Agent基建
 
-- **dbs-agent-migration** — Agent 工作台迁移（Claude Code / Codex / Grok / 通用 Agents 多端一致）
 - **dbs-install-skill** — 多端 Skill 安装与同步（安装、查看或卸载本地与外部 Skill）
-- **dbs-skill-maker** — 单个 Skill 制作器（需求分析、真实文件、分级验证与可选 GitHub 发布）
+- **dbs-skill-maker** — Skill 制作与改进（按改动规模先给方案、真实任务对比验证与可选 GitHub 发布）
 
 ## 进阶-学习
 
