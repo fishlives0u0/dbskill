@@ -2,11 +2,11 @@
 
 [简体中文](README.md) | English | [日本語](README.ja.md) | [한국어](README.ko.md) | [繁體中文](README.zh-TW.md)
 
-[![Version](https://img.shields.io/badge/version-3.0.1-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-3.0.2-111111.svg)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
-**This update:** The README has been rewritten. It opens with what dbskill can do, adds a section on how `/dbs` arranges Skills with 6 common arrangements and examples, and lists all 34 Skills by task.
+**This update:** The Chinese display names of 19 Skills now say directly what each one does, such as 「诊断商业问题」 (diagnose business problems) and 「检查内容违规」 (check content for violations). Skill names and how you call them are unchanged.
 
 ## What dbskill is
 

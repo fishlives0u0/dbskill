@@ -2,11 +2,11 @@
 
 [简体中文](README.md) | [English](README.en.md) | 日本語 | [한국어](README.ko.md) | [繁體中文](README.zh-TW.md)
 
-[![Version](https://img.shields.io/badge/version-3.0.1-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-3.0.2-111111.svg)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
-**今回の更新：** README を書き直しました。冒頭でできることを説明し、`/dbs` が Skill を選んで組み合わせる 6 つの典型的な方法を例とともに追加し、34 個すべての Skill を用途別に掲載しました。
+**今回の更新：** 19 個の Skill の中国語表示名を、用途がそのまま分かる名前に変更しました（例：「诊断商业问题」「检查内容违规」）。Skill の標準名と呼び出し方法は変わりません。
 
 ## dbskill とは
 

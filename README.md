@@ -2,11 +2,11 @@
 
 简体中文 | [English](README.en.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [繁體中文](README.zh-TW.md)
 
-[![Version](https://img.shields.io/badge/version-3.0.1-2563EB.svg?style=flat-square)](VERSION)
+[![Version](https://img.shields.io/badge/version-3.0.2-2563EB.svg?style=flat-square)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-16A34A.svg?style=flat-square)](LICENSE)
 
-**本次更新：** README 重写：开头先说能做什么，新增「/dbs 怎样安排 Skill」一节，用 6 种常见安排和例子说明 `/dbs` 怎样选择和组合 Skill，并按任务列出全部 34 个 Skill
+**本次更新：** 19 个技能的中文名改成直接说明用途的说法，例如「诊断商业问题」「找前人的解法」「检查内容违规」；标准名和调用方式不变
 
 ## dbskill 是什么
 

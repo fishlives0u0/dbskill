@@ -1,5 +1,5 @@
 {
-  "version": "3.0.1",
-  "notice": "README 重写：开头先说能做什么，新增 /dbs 安排 Skill 的 6 种方式和例子，并按任务列出全部 34 个 Skill",
+  "version": "3.0.2",
+  "notice": "19 个技能的中文名改成直接说明用途的说法，例如「诊断商业问题」「找前人的解法」「检查内容违规」",
   "details_url": "https://github.com/dontbesilent2025/dbskill/commits/main"
 }

@@ -2,11 +2,11 @@
 
 [简体中文](README.md) | [English](README.en.md) | [日本語](README.ja.md) | 한국어 | [繁體中文](README.zh-TW.md)
 
-[![Version](https://img.shields.io/badge/version-3.0.1-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-3.0.2-111111.svg)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
-**이번 업데이트:** README 를 다시 썼습니다. 처음에 할 수 있는 일을 설명하고, `/dbs` 가 Skill 을 고르고 조합하는 6 가지 대표적인 방식을 예시와 함께 추가했으며, 34 개 Skill 전체를 작업별로 정리했습니다.
+**이번 업데이트:** 19 개 Skill 의 중국어 표시 이름을 용도가 바로 드러나는 이름으로 바꿨습니다(예: 「诊断商业问题」「检查内容违规」). Skill 표준 이름과 호출 방법은 그대로입니다.
 
 ## dbskill 이란
 
