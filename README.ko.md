@@ -2,11 +2,11 @@
 
 [简体中文](README.md) | [English](README.en.md) | [日本語](README.ja.md) | 한국어 | [繁體中文](README.zh-TW.md)
 
-[![Version](https://img.shields.io/badge/version-3.0.2-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-3.0.3-111111.svg)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
-**이번 업데이트:** 19 개 Skill 의 중국어 표시 이름을 용도가 바로 드러나는 이름으로 바꿨습니다(예: 「诊断商业问题」「检查内容违规」). Skill 표준 이름과 호출 방법은 그대로입니다.
+**이번 업데이트:** 「诊断商业问题」「明确定义问题」「分析对标」 세 Skill 이 가격과 사업 문제를 다룰 때 강의 판매뿐 아니라 케이크 가게, 기장 대행, 매장 같은 업종 예시도 듭니다. 방법과 호출 방법은 그대로입니다.
 
 ## dbskill 이란
 

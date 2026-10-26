@@ -2,11 +2,11 @@
 
 [简体中文](README.md) | [English](README.en.md) | 日本語 | [한국어](README.ko.md) | [繁體中文](README.zh-TW.md)
 
-[![Version](https://img.shields.io/badge/version-3.0.2-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-3.0.3-111111.svg)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
-**今回の更新：** 19 個の Skill の中国語表示名を、用途がそのまま分かる名前に変更しました（例：「诊断商业问题」「检查内容违规」）。Skill の標準名と呼び出し方法は変わりません。
+**今回の更新：** 「诊断商业问题」「明确定义问题」「分析对标」の 3 つの Skill が価格やビジネスの問題を扱う例に、講座販売だけでなくケーキ店・記帳代行・店舗などの業種を加えました。方法と呼び出し方法は変わりません。
 
 ## dbskill とは
 

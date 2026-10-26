@@ -2,11 +2,11 @@
 
 [简体中文](README.md) | English | [日本語](README.ja.md) | [한국어](README.ko.md) | [繁體中文](README.zh-TW.md)
 
-[![Version](https://img.shields.io/badge/version-3.0.2-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-3.0.3-111111.svg)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
 
-**This update:** The Chinese display names of 19 Skills now say directly what each one does, such as 「诊断商业问题」 (diagnose business problems) and 「检查内容违规」 (check content for violations). Skill names and how you call them are unchanged.
+**This update:** When talking about pricing and business problems, 「诊断商业问题」, 「明确定义问题」 and 「分析对标」 now give examples from other businesses such as a cake shop, a bookkeeping firm or a local store, not only online courses. The methods and how you call them are unchanged.
 
 ## What dbskill is
 

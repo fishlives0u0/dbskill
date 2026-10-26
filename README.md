@@ -2,11 +2,11 @@
 
 简体中文 | [English](README.en.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [繁體中文](README.zh-TW.md)
 
-[![Version](https://img.shields.io/badge/version-3.0.2-2563EB.svg?style=flat-square)](VERSION)
+[![Version](https://img.shields.io/badge/version-3.0.3-2563EB.svg?style=flat-square)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-16A34A.svg?style=flat-square)](LICENSE)
 
-**本次更新：** 19 个技能的中文名改成直接说明用途的说法，例如「诊断商业问题」「找前人的解法」「检查内容违规」；标准名和调用方式不变
+**本次更新：** 「诊断商业问题」「明确定义问题」「分析对标」三个技能讲定价和商业问题时，在卖课之外也举蛋糕、代账、门店等行业的例子；方法和调用方式不变
 
 ## dbskill 是什么
 
