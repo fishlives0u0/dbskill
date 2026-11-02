@@ -2,11 +2,11 @@
 
 [简体中文](README.md) | [English](README.en.md) | 日本語 | [한국어](README.ko.md) | [繁體中文](README.zh-TW.md)
 
-[![Version](https://img.shields.io/badge/version-3.1.0-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-3.2.2-111111.svg)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
-[![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-111111.svg)](LICENSE)
 
-**今回の更新：** 「诊断商业问题」「明确定义问题」「分析对标」の 3 つの Skill が価格やビジネスの問題を扱う例に、講座販売だけでなくケーキ店・記帳代行・店舗などの業種を加えました。方法と呼び出し方法は変わりません。
+**今回の更新：** リポジトリをすべての権利留保に変更しました。Skill は引き続き無料でインストール・利用でき、自分のビジネスや顧客へのサービスにも使えます。許可なく転載、同梱、販売、AI 学習への利用はできません。全文は [LICENSE](LICENSE) を参照してください
 
 ## dbskill とは
 
@@ -35,6 +35,8 @@ npx -y skills add dontbesilent2025/dbskill -g --all
 
 Claude Code のプラグインマーケットプレイスを使う方法や、Skill を 1 つだけインストールする方法は、[インストールの詳細](#インストールの詳細)を参照してください。
 
+Grok Bot では、用意済みの [dbs 创业教练（起業コーチ）](https://x.ai/bot/kpZtlm5CADHoXaaAqTV5Z) か [dbs 内容教练（コンテンツコーチ）](https://x.ai/bot/qonh7lyBBYsbUXsR9LtO2) を追加するだけです。使い方は [Grok Bot で使う](#grok-bot-で使う) を参照してください。
+
 **ステップ 2：問題を `/dbs` に渡す**
 
 Agent の入力欄に `/dbs` と入力し、続けて状況と問題を書きます。情報が揃っていなくてもかまいません。
@@ -48,6 +50,33 @@ Agent の入力欄に `/dbs` と入力し、続けて状況と問題を書きま
 **ステップ 3：同じ会話で続ける**
 
 結果を受け取ったら、事実、資料、修正の希望をそのまま追加してください。コマンドを入力し直す必要はありません。別の目標に移るときは、もう一度 `/dbs` と入力します。
+
+## Grok Bot で使う
+
+Grok Bot ではコマンドを打つ必要はありません。用意済みのコーチを追加すると、最初の会話で dbskill を自分でインストールします。コーチは中国語で話します。
+
+| コーチ | 手伝えること | 追加リンク |
+| --- | --- | --- |
+| dbs 创业教练（起業コーチ） | ビジネスがどこで詰まっているか、今週まず何をするかを決める。希望すれば毎週月曜に振り返りに来る | https://x.ai/bot/kpZtlm5CADHoXaaAqTV5Z |
+| dbs 内容教练（コンテンツコーチ） | テーマ選び、タイトル・カバー文字・冒頭の作成、原稿チェック、投稿ごとの振り返り。希望すれば毎週金曜に振り返りに来る | https://x.ai/bot/qonh7lyBBYsbUXsR9LtO2 |
+
+**使い方**
+
+1. 上のリンクを開いて「Add to Grok Bot」を押し、Grok Bot アプリで追加を確認します
+2. 追加したコーチに「こんにちは」と送ります。数分かけて dbskill をインストールし、ビジネスやアカウントについていくつか質問します
+3. あとは質問をそのまま送ります。例：「講座の継続率が低い。まずどこを見ればいい？」
+
+**コーチがインストールできないと言ったとき**
+
+次のブロックをそのまま送ってください。コンテンツコーチの場合は、最後の `startup` を `content` に置き換えます。
+
+```text
+次の 2 つのコマンドを実行して dbskill をインストールし、出力をそのまま見せてください：
+git clone --depth 1 https://github.com/dontbesilent2025/dbskill /tmp/dbskill 2>/dev/null || git -C /tmp/dbskill pull --ff-only
+python3 /tmp/dbskill/tools/grok/install.py --coach startup
+```
+
+コーチを使わず自分の Grok Bot に dbskill だけ入れたい場合も、同じブロックの `startup` を `all` にして送ると、公開 Skill 29 個がすべて入ります。
 
 ## /dbs が Skill を組み合わせる方法
 
@@ -247,4 +276,11 @@ Agent との会話で次のように伝えます。
 
 ## ライセンス
 
-本プロジェクトは [CC BY-NC 4.0](LICENSE) ライセンスを採用しています。個人の学習、研究、非商用での利用には出典を明記してください。商用利用には作者に連絡して許可を得てください。
+本プロジェクトの著作権は dontbesilent に帰属し、すべての権利を留保します。全文は [LICENSE](LICENSE) を参照してください（中国語版が優先されます）。
+
+- Skill は無料でインストール・利用できます。自分のビジネスや自分の顧客へのサービスでの利用、自分の端末上で自分用に改変することも含みます。
+- 書面による許可なく、転載、再配布、他の製品への同梱、販売、改変版の公開、AI モデルの学習への利用はできません。本リポジトリへのリンクの共有は自由です。
+- `books/` ディレクトリは無料での閲読のみ可能です。[books/LICENSE](books/LICENSE) を参照してください。
+- 2026-11-02 より前に公開された版は、当時の CC BY-NC 4.0 のままです。
+
+許可の申請は WeChat 公式アカウント「dontbesilent」へのメッセージ、または openmarshall@gmail.com まで。

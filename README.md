@@ -2,11 +2,11 @@
 
 简体中文 | [English](README.en.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [繁體中文](README.zh-TW.md)
 
-[![Version](https://img.shields.io/badge/version-3.1.0-2563EB.svg?style=flat-square)](VERSION)
+[![Version](https://img.shields.io/badge/version-3.2.2-2563EB.svg?style=flat-square)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
-[![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-16A34A.svg?style=flat-square)](LICENSE)
+[![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-16A34A.svg?style=flat-square)](LICENSE)
 
-**本次更新：** 「诊断商业问题」「明确定义问题」「分析对标」三个技能讲定价和商业问题时，在卖课之外也举蛋糕、代账、门店等行业的例子；方法和调用方式不变
+**本次更新：** 仓库改为保留所有权利。Skill 仍可免费安装和使用，也能用于自己的生意和客户服务；未经许可不得转载、打包、出售或用于 AI 训练。完整条款见 [LICENSE](LICENSE)
 
 ## dbskill 是什么
 
@@ -35,6 +35,8 @@ npx -y skills add dontbesilent2025/dbskill -g --all
 
 使用 Claude Code 插件市场或只装单个 Skill，见下文[安装详情](#安装详情)
 
+在 Grok Bot 里使用：直接添加现成的 [dbs 创业教练](https://x.ai/bot/kpZtlm5CADHoXaaAqTV5Z) 或 [dbs 内容教练](https://x.ai/bot/qonh7lyBBYsbUXsR9LtO2)，用法见[在 Grok Bot 里使用](#在-grok-bot-里使用)
+
 **第 2 步：把问题交给 `/dbs`**
 
 在 Agent 对话框输入 `/dbs`，后面写上你的情况和问题。信息不完整也可以：
@@ -48,6 +50,33 @@ npx -y skills add dontbesilent2025/dbskill -g --all
 **第 3 步：在同一个对话里继续**
 
 收到结果后，直接补充事实、材料或修改意见，不用重新输入命令。换一个新目标时，再输入一次 `/dbs`
+
+## 在 Grok Bot 里使用
+
+在 Grok Bot 里不用敲命令，直接添加现成的教练。第一次聊天时，它会自己装好 dbskill
+
+| 教练 | 能帮你做什么 | 添加链接 |
+| --- | --- | --- |
+| dbs 创业教练 | 想清楚生意卡在哪、这周先做哪一件事；愿意的话，每周一主动找你复盘 | https://x.ai/bot/kpZtlm5CADHoXaaAqTV5Z |
+| dbs 内容教练 | 定选题，写标题、封面和开头，检查稿子，复盘每条内容的表现；愿意的话，每周五主动找你复盘 | https://x.ai/bot/qonh7lyBBYsbUXsR9LtO2 |
+
+**怎么用**
+
+1. 打开上面的链接，点「Add to Grok Bot」，在 Grok Bot App 里确认添加
+2. 给新添加的教练发一句「你好」。它会先花几分钟装好 dbskill，再问你几个关于生意或账号的问题
+3. 之后直接说你的问题，例如「我的课续费率很低，先查哪里」「帮我给这条视频想个标题」
+
+**教练说装不上时**
+
+把下面这段原样发给它。用内容教练的，把最后的 `startup` 换成 `content`：
+
+```text
+请在你的运行环境里执行下面两条命令安装 dbskill，把输出原样告诉我：
+git clone --depth 1 https://github.com/dontbesilent2025/dbskill /tmp/dbskill 2>/dev/null || git -C /tmp/dbskill pull --ff-only
+python3 /tmp/dbskill/tools/grok/install.py --coach startup
+```
+
+不用教练、只想在自己的 Grok Bot 里装 dbskill，也发这段，把 `startup` 换成 `all`，会装好全部 29 个公开 Skill
 
 ## /dbs 怎样安排 Skill
 
@@ -217,8 +246,8 @@ claude plugin install dbs-diagnosis@dontbesilent-skills
 
 | 资料 | 用途 |
 | --- | --- |
-| [公开推文集（Markdown）](books/dontbesilent-开源推文集.md) | 搜索、阅读，或交给 AI 分析 |
-| [公开推文集（PDF）](books/dontbesilent-开源推文集.pdf) | 阅读和保存 |
+| [dontbesilent 推文集（Markdown）](books/dontbesilent-开源推文集.md) | 搜索、阅读，或交给 AI 分析 |
+| [dontbesilent 推文集（PDF）](books/dontbesilent-开源推文集.pdf) | 阅读和保存 |
 | [原子库说明](知识库/原子库/README.md) | 数据范围、字段和使用方式 |
 | [知识原子数据](知识库/原子库/atoms.jsonl) | 自建检索、分析或 RAG |
 | [Skill 知识包](知识库/Skill知识包) | 按 Skill 整理的方法资料 |
@@ -247,4 +276,11 @@ claude plugin install dbs-diagnosis@dontbesilent-skills
 
 ## 许可证
 
-本项目采用 [CC BY-NC 4.0](LICENSE) 许可证。个人学习、研究和非商业使用请注明来源；商业用途请联系作者获取授权
+本项目版权归 dontbesilent 所有，保留所有权利，完整条款见 [LICENSE](LICENSE)。
+
+- 你可以免费安装和使用 Skill，包括用它做自己的生意、给自己的客户提供服务，也可以在自己的设备上修改后自用。
+- 未经书面许可，不得转载、再分发、打包进其他产品、出售或公开发布修改版，也不得用于训练 AI 模型。分享本仓库链接不受限制。
+- `books/` 目录只供免费阅读，见 [books/LICENSE](books/LICENSE)。
+- 2026-11-02 之前发布的版本，仍按当时的 CC BY-NC 4.0 授权。
+
+申请授权请在微信公众号「dontbesilent」后台留言，或发邮件至 openmarshall@gmail.com。

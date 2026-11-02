@@ -2,11 +2,11 @@
 
 [简体中文](README.md) | English | [日本語](README.ja.md) | [한국어](README.ko.md) | [繁體中文](README.zh-TW.md)
 
-[![Version](https://img.shields.io/badge/version-3.1.0-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-3.2.2-111111.svg)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
-[![License](https://img.shields.io/badge/license-CC%20BY--NC%204.0-111111.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-111111.svg)](LICENSE)
 
-**This update:** When talking about pricing and business problems, 「诊断商业问题」, 「明确定义问题」 and 「分析对标」 now give examples from other businesses such as a cake shop, a bookkeeping firm or a local store, not only online courses. The methods and how you call them are unchanged.
+**This update:** The repository is now all rights reserved. You can still install and use the Skills for free, including in your own business and for your clients; without permission you may not repost, bundle, sell, or use them for AI training. See [LICENSE](LICENSE) for the full terms
 
 ## What dbskill is
 
@@ -35,6 +35,8 @@ npx -y skills add dontbesilent2025/dbskill -g --all
 
 To use the Claude Code marketplace or install a single Skill, see [Installation details](#installation-details) below.
 
+In Grok Bot, just add the ready-made [dbs 创业教练 (startup coach)](https://x.ai/bot/kpZtlm5CADHoXaaAqTV5Z) or [dbs 内容教练 (content coach)](https://x.ai/bot/qonh7lyBBYsbUXsR9LtO2). See [Use it in Grok Bot](#use-it-in-grok-bot).
+
 **Step 2: Give your question to `/dbs`**
 
 In your Agent's chat box, enter `/dbs` followed by your situation and question. Incomplete information is fine:
@@ -48,6 +50,33 @@ If this is your first time, you can enter `/dbs 新手入门` to see which tasks
 **Step 3: Continue in the same conversation**
 
 After you get a result, add facts, material, or change requests directly. You do not need to enter the command again. When you switch to a new goal, enter `/dbs` again.
+
+## Use it in Grok Bot
+
+In Grok Bot you don't type any commands. Add one of the ready-made coaches, and it installs dbskill by itself in your first chat. The coaches talk in Chinese.
+
+| Coach | What it helps with | Add link |
+| --- | --- | --- |
+| dbs 创业教练 (startup coach) | Find where your business is stuck and the one thing to do this week; if you want, it checks in every Monday | https://x.ai/bot/kpZtlm5CADHoXaaAqTV5Z |
+| dbs 内容教练 (content coach) | Pick topics, write titles, cover text and openings, check drafts, review how each post did; if you want, it checks in every Friday | https://x.ai/bot/qonh7lyBBYsbUXsR9LtO2 |
+
+**How to use it**
+
+1. Open a link above, tap "Add to Grok Bot", and confirm in the Grok Bot app
+2. Say "hi" to the new coach. It spends a few minutes installing dbskill, then asks you a few questions about your business or account
+3. Then just ask your question, for example "My course renewal rate is low. What should I check first?"
+
+**If the coach says it cannot install**
+
+Send it the block below as-is. For the content coach, replace the final `startup` with `content`:
+
+```text
+Please run these two commands in your environment to install dbskill, and show me the output as-is:
+git clone --depth 1 https://github.com/dontbesilent2025/dbskill /tmp/dbskill 2>/dev/null || git -C /tmp/dbskill pull --ff-only
+python3 /tmp/dbskill/tools/grok/install.py --coach startup
+```
+
+To install dbskill in your own Grok Bot without a coach, send the same block with `startup` replaced by `all`. This installs all 29 public Skills.
 
 ## How /dbs arranges Skills
 
@@ -247,4 +276,11 @@ The sensitive-word checking in `dbs-content-risk-check` was improved together by
 
 ## License
 
-This project is licensed under [CC BY-NC 4.0](LICENSE). For personal study, research, and non-commercial use, please credit the source. For commercial use, contact the author for authorization.
+Copyright © dontbesilent. All rights reserved. See [LICENSE](LICENSE) for the full terms (the Chinese version prevails).
+
+- You may install and use the Skills for free, including in your own business and when serving your own clients, and you may modify them on your own devices for your own use.
+- Without written permission, you may not repost, redistribute, bundle into other products, sell, or publicly release modified versions, or use the content to train AI models. Sharing links to this repository is fine.
+- The `books/` directory is for free reading only. See [books/LICENSE](books/LICENSE).
+- Versions released before 2026-11-02 remain under CC BY-NC 4.0 as granted at the time.
+
+To request permission, leave a message on the WeChat Official Account "dontbesilent" or email openmarshall@gmail.com.
