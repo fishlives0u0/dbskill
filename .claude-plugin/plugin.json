@@ -38,6 +38,7 @@
     "./skills/dbs-spread",
     "./skills/dbs-resonate",
     "./skills/dbs-script-flow",
+    "./skills/dbs-sync-to-dondon",
     "./skills/dbs-convert"
   ]
 }
