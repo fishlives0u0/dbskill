@@ -2,15 +2,15 @@
 
 简体中文 | [English](README.en.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [繁體中文](README.zh-TW.md)
 
-[![Version](https://img.shields.io/badge/version-3.6.0-2563EB.svg?style=flat-square)](VERSION)
+[![Version](https://img.shields.io/badge/version-3.8.0-2563EB.svg?style=flat-square)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
 [![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-16A34A.svg?style=flat-square)](LICENSE)
 
-**本次更新：** 仓库改为保留所有权利。Skill 仍可免费安装和使用，也能用于自己的生意和客户服务；未经许可不得转载、打包、出售或用于 AI 训练。完整条款见 [LICENSE](LICENSE)
+**本次更新：** 安装 Skill 时可自动同步到 Antigravity 的全局目录，供各工作区调用。
 
 ## dbskill 是什么
 
-dbskill 是 dontbesilent 制作的中文 AI Skills 工具箱，共 36 个 Skill。安装到豆包、WorkBuddy、Claude Code、Codex 等支持 Skills 的 Agent 后，可以在对话里直接使用
+dbskill 是 dontbesilent 制作的中文 AI Skills 工具箱，共 37 个 Skill。安装到豆包、WorkBuddy、Claude Code、Codex 等支持 Skills 的 Agent 后，可以在对话里直接使用
 
 Skill 是一套写给 Agent 的做事方法。装好 dbskill 后，你可以让 Agent：
 
@@ -181,6 +181,7 @@ python3 /tmp/dbskill/tools/grok/install.py --coach startup
 | [`/dbs-human-dispatch`](skills/dbs-human-dispatch/SKILL.md) | 把任务派给员工或协作者，跟进进度并验收结果 |
 | [`/dbs-skill-maker`](skills/dbs-skill-maker/SKILL.md) | 制作新的 Skill，或改进已有的 Skill |
 | [`/dbs-install-skill`](skills/dbs-install-skill/SKILL.md) | 把 Skill 安装到多个 Agent，并清理重复的入口 |
+| [`/dbs-computer-use`](skills/dbs-computer-use/SKILL.md) | 让 Agent 在电脑上操作网页和桌面 App，尽量在后台进行、不抢鼠标；缺工具时先说明再引导安装，付款、删除、发送前停下等你确认 |
 
 ## 安装详情
 

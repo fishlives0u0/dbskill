@@ -1,5 +1,5 @@
 {
-  "version": "3.6.0",
-  "notice": "「知识库搭建与维护」和「内容复用系统」新建工程时只生成 AGENTS.md，不再另建 CLAUDE.md，Claude Code 直接读取 AGENTS.md",
+  "version": "3.8.0",
+  "notice": "安装 Skill 时可自动同步到 Antigravity 的全局目录，供各工作区调用。",
   "details_url": "https://github.com/dontbesilent2025/dbskill/commits/main"
 }
