@@ -2,15 +2,15 @@
 
 简体中文 | [English](README.en.md) | [日本語](README.ja.md) | [한국어](README.ko.md) | [繁體中文](README.zh-TW.md)
 
-[![Version](https://img.shields.io/badge/version-3.8.0-2563EB.svg?style=flat-square)](VERSION)
+[![Version](https://img.shields.io/badge/version-3.9.1-2563EB.svg?style=flat-square)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
 [![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-16A34A.svg?style=flat-square)](LICENSE)
 
-**本次更新：** 安装 Skill 时可自动同步到 Antigravity 的全局目录，供各工作区调用。
+**本次更新：** 「守住目标」的示例换成剪切片和做 3D 网站，不再用逆向 App 举例，减少被模型安全机制误拦的可能。
 
 ## dbskill 是什么
 
-dbskill 是 dontbesilent 制作的中文 AI Skills 工具箱，共 37 个 Skill。安装到豆包、WorkBuddy、Claude Code、Codex 等支持 Skills 的 Agent 后，可以在对话里直接使用
+dbskill 是 dontbesilent 制作的中文 AI Skills 工具箱，共 38 个 Skill。安装到豆包、WorkBuddy、Claude Code、Codex 等支持 Skills 的 Agent 后，可以在对话里直接使用
 
 Skill 是一套写给 Agent 的做事方法。装好 dbskill 后，你可以让 Agent：
 
@@ -110,7 +110,8 @@ python3 /tmp/dbskill/tools/grok/install.py --coach startup
 | [`/dbs-diagnosis`](skills/dbs-diagnosis/SKILL.md) | 判断一个商业问题是否成立，或全面检查一门生意，给出明天要做的第一件事 |
 | [`/dbs-benchmark`](skills/dbs-benchmark/SKILL.md) | 筛选值得模仿的同行，拆出对方获客、转化、交付的具体做法 |
 | [`/dbs-jtbd`](skills/dbs-jtbd/SKILL.md) | 分析顾客为什么选择或放弃一个产品 |
-| [`/dbs-goal`](skills/dbs-goal/SKILL.md) | 把模糊的愿望整理成能检查的目标和完成标准 |
+| [`/dbs-goal`](skills/dbs-goal/SKILL.md) | 动手前把模糊的愿望整理成能检查的目标和完成标准 |
+| [`/dbs-goal-hold`](skills/dbs-goal-hold/SKILL.md) | 执行中守住已定目标，拦住 Agent 嫌难换小目标、遇阻停手、把技术决策甩回给你 |
 | [`/dbs-good-question`](skills/dbs-good-question/SKILL.md) | 把模糊的问题改写清楚，判断哪些部分能交给 Agent |
 | [`/dbs-deconstruct`](skills/dbs-deconstruct/SKILL.md) | 拆解一个说不清的概念，讲清它在不同场合的意思 |
 | [`/dbs-theory-grounding`](skills/dbs-theory-grounding/SKILL.md) | 检查课程、PPT 或方法论里的判断，找到可信的理论依据 |

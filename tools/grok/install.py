@@ -25,7 +25,7 @@ MAX_DESC = 1536
 
 COACHES = {
     'startup': ['dbs', 'dbs-diagnosis', 'dbs-benchmark', 'dbs-standard-answer', 'dbs-theory-grounding',
-                'dbs-action', 'dbs-deconstruct', 'dbs-goal', 'dbs-good-question', 'dbs-jtbd', 'dbs-decision',
+                'dbs-action', 'dbs-deconstruct', 'dbs-goal', 'dbs-goal-hold', 'dbs-good-question', 'dbs-jtbd', 'dbs-decision',
                 'dbs-chatroom', 'dbs-chatroom-austrian', 'dbs-save', 'dbs-restore', 'dbs-report'],
     'content': ['dbs', 'dbs-content', 'dbs-content-value', 'dbs-content-risk-check', 'dbs-title-cover-intro',
                 'dbs-spread', 'dbs-resonate', 'dbs-script-flow', 'dbs-ai-check', 'dbs-plain-writing',
@@ -34,7 +34,7 @@ COACHES = {
 COACHES['all'] = ['dbs', 'dbs-diagnosis', 'dbs-benchmark', 'dbs-standard-answer', 'dbs-theory-grounding',
                   'dbs-action', 'dbs-content', 'dbs-content-value', 'dbs-content-risk-check',
                   'dbs-title-cover-intro', 'dbs-deconstruct', 'dbs-chatroom', 'dbs-chatroom-austrian',
-                  'dbs-ai-check', 'dbs-plain-writing', 'dbs-wechat-html', 'dbs-goal', 'dbs-good-question',
+                  'dbs-ai-check', 'dbs-plain-writing', 'dbs-wechat-html', 'dbs-goal', 'dbs-goal-hold', 'dbs-good-question',
                   'dbs-jtbd', 'dbs-learning', 'dbs-spread', 'dbs-resonate', 'dbs-script-flow', 'dbs-save',
                   'dbs-restore', 'dbs-report', 'dbs-decision', 'dbs-knowledge', 'dbs-skill-maker']
 SKIP_REFS = {'dbs': {'local.md'}, 'dbs-skill-maker': {'github-publishing.md'}}

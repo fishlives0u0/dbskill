@@ -1,0 +1,4 @@
+interface:
+  display_name: "dbs-goal-hold（守住目标）"
+  short_description: "执行中对照目标卡，拦住 Agent 嫌难就换小目标、遇阻停手、把技术决策甩回用户"
+  default_prompt: "使用 $dbs-goal-hold，对照我的目标卡讲清你现在有没有把目标换成更容易的事、遇阻停手或让我做技术决策，给出回到原目标的下一步，然后把这条原则写进规则文件。"

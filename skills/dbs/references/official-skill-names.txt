@@ -26,6 +26,7 @@ dbs-save
 dbs-restore
 dbs-report
 dbs-goal
+dbs-goal-hold
 dbs-good-question
 dbs-jtbd
 dbs-decision

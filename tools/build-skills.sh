@@ -21,7 +21,7 @@ group_for() {
   case "$1" in
     dbs|dbs-update)
       echo "必装入口" ;;
-    dbs-diagnosis|dbs-standard-answer|dbs-theory-grounding|dbs-deconstruct|dbs-goal|dbs-good-question|dbs-jtbd|dbs-action)
+    dbs-diagnosis|dbs-standard-answer|dbs-theory-grounding|dbs-deconstruct|dbs-goal|dbs-goal-hold|dbs-good-question|dbs-jtbd|dbs-action)
       echo "看商业问题" ;;
     dbs-content|dbs-content-value|dbs-video-navigation|dbs-content-risk-check|dbs-benchmark|dbs-title-cover-intro|dbs-ai-check|dbs-plain-writing|dbs-wechat-html|dbs-spread|dbs-resonate|dbs-script-flow|dbs-video-extract)
       echo "做内容" ;;
@@ -170,7 +170,8 @@ Trae Solo 一个 zip 装一个 skill。本压缩包按使用场景分了几个�
 - **dbs-theory-grounding** — 理论溯源与案例重释（审查命题、核实理论来源并标明适用边界）
 - **dbs-standard-answer** — 理论挖掘与历史同构研究（先找相关领域、作者和理论，再提炼带条件的历史答案）
 - **dbs-deconstruct** — 概念拆解（维特根斯坦 + 奥派经济学）
-- **dbs-goal** — 目标清晰化（把「我想做个人 IP」这种愿望语法审计成可检查的交付物）
+- **dbs-goal** — 定义目标（动手前把「我想做个人 IP」这种愿望整理成可检查的目标卡）
+- **dbs-goal-hold** — 守住目标（执行中拦住 Agent 嫌难换小目标、遇阻停手、把技术决策甩回用户）
 - **dbs-good-question** — 好问题生成器（把模糊问题改成 Agent 可推理、可验证的问题说明书）
 - **dbs-jtbd** — JTBD 任务澄清（识别情境中的进展、切换力量与选择标准）
 - **dbs-action** — 执行力诊断（阿德勒心理学，「知道该做但就是不做」）

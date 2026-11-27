@@ -32,6 +32,7 @@
     "./skills/dbs-restore",
     "./skills/dbs-report",
     "./skills/dbs-goal",
+    "./skills/dbs-goal-hold",
     "./skills/dbs-good-question",
     "./skills/dbs-jtbd",
     "./skills/dbs-decision",

@@ -2,15 +2,15 @@
 
 [简体中文](README.md) | [English](README.en.md) | 日本語 | [한국어](README.ko.md) | [繁體中文](README.zh-TW.md)
 
-[![Version](https://img.shields.io/badge/version-3.8.0-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-3.9.1-111111.svg)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
 [![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-111111.svg)](LICENSE)
 
-**今回の更新：** リポジトリをすべての権利留保に変更しました。Skill は引き続き無料でインストール・利用でき、自分のビジネスや顧客へのサービスにも使えます。許可なく転載、同梱、販売、AI 学習への利用はできません。全文は [LICENSE](LICENSE) を参照してください
+**今回の更新：** `/dbs-goal-hold`（目標を守る）の例を、アプリの逆解析から動画の切り抜きと 3D サイト制作に差し替え、モデルの安全フィルターに誤って止められる可能性を減らしました。
 
 ## dbskill とは
 
-dbskill は dontbesilent が作成した中国語の AI Skills ツールキットで、37 個の Skill を含みます。豆包、WorkBuddy、Claude Code、Codex など Skills に対応する Agent にインストールすると、会話の中でそのまま使えます。
+dbskill は dontbesilent が作成した中国語の AI Skills ツールキットで、38 個の Skill を含みます。豆包、WorkBuddy、Claude Code、Codex など Skills に対応する Agent にインストールすると、会話の中でそのまま使えます。
 
 Skill は、Agent に渡す作業の進め方です。dbskill をインストールすると、Agent に次のことを任せられます。
 
@@ -110,7 +110,8 @@ python3 /tmp/dbskill/tools/grok/install.py --coach startup
 | [`/dbs-diagnosis`](skills/dbs-diagnosis/SKILL.md) | ビジネス上の問題が本当に成り立つかを判断する、またはビジネス全体を点検し、明日最初にやることを示す |
 | [`/dbs-benchmark`](skills/dbs-benchmark/SKILL.md) | 参考にする価値のある同業者を選び、集客、成約、提供の具体的なやり方を分解する |
 | [`/dbs-jtbd`](skills/dbs-jtbd/SKILL.md) | 顧客がある商品を選ぶ理由、やめる理由を分析する |
-| [`/dbs-goal`](skills/dbs-goal/SKILL.md) | 漠然とした希望を、確認できる目標と完了基準に整理する |
+| [`/dbs-goal`](skills/dbs-goal/SKILL.md) | 作業前に、漠然とした希望を確認できる目標と完了基準に整理する |
+| [`/dbs-goal-hold`](skills/dbs-goal-hold/SKILL.md) | 作業中に決めた目標を守る。難しいからと目標を小さくすり替える、一つの方法が塞がると止まる、技術的な判断をあなたに戻す、を防ぐ |
 | [`/dbs-good-question`](skills/dbs-good-question/SKILL.md) | 曖昧な問いを明確に書き直し、どの部分を Agent に任せられるかを判断する |
 | [`/dbs-deconstruct`](skills/dbs-deconstruct/SKILL.md) | うまく説明できない概念を分解し、場面ごとの意味を明らかにする |
 | [`/dbs-theory-grounding`](skills/dbs-theory-grounding/SKILL.md) | 講座、PPT、方法論の中の判断を確認し、信頼できる理論的根拠を見つける |

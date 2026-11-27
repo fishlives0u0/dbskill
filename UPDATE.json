@@ -1,5 +1,5 @@
 {
-  "version": "3.8.0",
-  "notice": "安装 Skill 时可自动同步到 Antigravity 的全局目录，供各工作区调用。",
+  "version": "3.9.1",
+  "notice": "「守住目标」的示例换成剪切片和做 3D 网站，不再用逆向 App 举例，减少被模型安全机制误拦的可能。",
   "details_url": "https://github.com/dontbesilent2025/dbskill/commits/main"
 }

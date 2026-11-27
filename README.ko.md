@@ -2,15 +2,15 @@
 
 [简体中文](README.md) | [English](README.en.md) | [日本語](README.ja.md) | 한국어 | [繁體中文](README.zh-TW.md)
 
-[![Version](https://img.shields.io/badge/version-3.8.0-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-3.9.1-111111.svg)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
 [![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-111111.svg)](LICENSE)
 
-**이번 업데이트:** 저장소를 모든 권리 보유로 변경했습니다. Skill은 계속 무료로 설치하고 사용할 수 있으며 자신의 사업과 고객 서비스에도 쓸 수 있습니다. 허가 없이 전재, 포함, 판매, AI 학습에 사용할 수 없습니다. 전체 조항은 [LICENSE](LICENSE)를 참고하세요
+**이번 업데이트:** `/dbs-goal-hold`(목표 지키기)의 예시를 앱 역분석에서 영상 클립 편집과 3D 웹사이트 제작으로 바꿔, 모델 안전 필터에 잘못 막힐 가능성을 줄였습니다.
 
 ## dbskill 이란
 
-dbskill 은 dontbesilent 가 만든 중국어 AI Skills 도구 상자이며, Skill 37 개로 구성됩니다. 豆包, WorkBuddy, Claude Code, Codex 등 Skills 를 지원하는 Agent 에 설치하면 대화에서 바로 사용할 수 있습니다.
+dbskill 은 dontbesilent 가 만든 중국어 AI Skills 도구 상자이며, Skill 38 개로 구성됩니다. 豆包, WorkBuddy, Claude Code, Codex 등 Skills 를 지원하는 Agent 에 설치하면 대화에서 바로 사용할 수 있습니다.
 
 Skill 은 Agent 에게 주는 작업 방법입니다. dbskill 을 설치하면 Agent 에게 다음을 맡길 수 있습니다.
 
@@ -110,7 +110,8 @@ python3 /tmp/dbskill/tools/grok/install.py --coach startup
 | [`/dbs-diagnosis`](skills/dbs-diagnosis/SKILL.md) | 비즈니스 문제가 성립하는지 판단하거나 사업 전체를 점검하고, 내일 할 첫 번째 일을 제시합니다 |
 | [`/dbs-benchmark`](skills/dbs-benchmark/SKILL.md) | 모방할 만한 동종 업체를 골라 고객 확보, 전환, 제공의 구체적인 방법을 분석합니다 |
 | [`/dbs-jtbd`](skills/dbs-jtbd/SKILL.md) | 고객이 어떤 상품을 선택하거나 포기하는 이유를 분석합니다 |
-| [`/dbs-goal`](skills/dbs-goal/SKILL.md) | 막연한 바람을 점검 가능한 목표와 완료 기준으로 정리합니다 |
+| [`/dbs-goal`](skills/dbs-goal/SKILL.md) | 작업 전에 막연한 바람을 점검 가능한 목표와 완료 기준으로 정리합니다 |
+| [`/dbs-goal-hold`](skills/dbs-goal-hold/SKILL.md) | 작업 중에 정한 목표를 지킵니다. 어렵다고 목표를 줄이거나, 한 방법이 막히면 멈추거나, 기술적 결정을 사용자에게 떠넘기는 것을 막습니다 |
 | [`/dbs-good-question`](skills/dbs-good-question/SKILL.md) | 모호한 질문을 명확하게 다시 쓰고, 어떤 부분을 Agent 에게 맡길 수 있는지 판단합니다 |
 | [`/dbs-deconstruct`](skills/dbs-deconstruct/SKILL.md) | 설명하기 어려운 개념을 분해해 상황마다 어떤 뜻인지 정리합니다 |
 | [`/dbs-theory-grounding`](skills/dbs-theory-grounding/SKILL.md) | 강의, PPT, 방법론 속 판단을 점검하고 신뢰할 수 있는 이론적 근거를 찾습니다 |

@@ -2,15 +2,15 @@
 
 [简体中文](README.md) | English | [日本語](README.ja.md) | [한국어](README.ko.md) | [繁體中文](README.zh-TW.md)
 
-[![Version](https://img.shields.io/badge/version-3.8.0-111111.svg)](VERSION)
+[![Version](https://img.shields.io/badge/version-3.9.1-111111.svg)](VERSION)
 [![skills.sh](https://skills.sh/b/dontbesilent2025/dbskill)](https://skills.sh/b/dontbesilent2025/dbskill)
 [![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-111111.svg)](LICENSE)
 
-**This update:** The repository is now all rights reserved. You can still install and use the Skills for free, including in your own business and for your clients; without permission you may not repost, bundle, sell, or use them for AI training. See [LICENSE](LICENSE) for the full terms
+**This update:** The examples in `/dbs-goal-hold` (Hold the Goal) now use video clipping and building a 3D website instead of reverse-engineering an app, making it less likely to be wrongly blocked by model safety filters.
 
 ## What dbskill is
 
-dbskill is a Chinese AI Skills toolkit made by dontbesilent, with 37 Skills. After you install it in Doubao, WorkBuddy, Claude Code, Codex, or another Agent that supports Skills, you can use it directly in the conversation.
+dbskill is a Chinese AI Skills toolkit made by dontbesilent, with 38 Skills. After you install it in Doubao, WorkBuddy, Claude Code, Codex, or another Agent that supports Skills, you can use it directly in the conversation.
 
 A Skill is a working method written for an Agent. With dbskill installed, you can ask your Agent to:
 
@@ -110,7 +110,8 @@ If you already know which Skill you need, you can enter its command directly. Fo
 | [`/dbs-diagnosis`](skills/dbs-diagnosis/SKILL.md) | Judges whether a business problem holds up, or checks a whole business, and gives the first thing to do tomorrow |
 | [`/dbs-benchmark`](skills/dbs-benchmark/SKILL.md) | Picks peers worth imitating and breaks down how they acquire, convert, and deliver |
 | [`/dbs-jtbd`](skills/dbs-jtbd/SKILL.md) | Analyzes why customers choose or drop a product |
-| [`/dbs-goal`](skills/dbs-goal/SKILL.md) | Turns a vague wish into a checkable goal and completion criteria |
+| [`/dbs-goal`](skills/dbs-goal/SKILL.md) | Before work starts, turns a vague wish into a checkable goal and completion criteria |
+| [`/dbs-goal-hold`](skills/dbs-goal-hold/SKILL.md) | Keeps the set goal during work: stops the Agent from shrinking the goal when it gets hard, stopping at the first blocked path, or handing technical decisions back to you |
 | [`/dbs-good-question`](skills/dbs-good-question/SKILL.md) | Rewrites a vague question clearly and judges which parts an Agent can handle |
 | [`/dbs-deconstruct`](skills/dbs-deconstruct/SKILL.md) | Breaks down an unclear concept and explains what it means in different contexts |
 | [`/dbs-theory-grounding`](skills/dbs-theory-grounding/SKILL.md) | Checks claims in courses, slides, or methodologies and finds credible theoretical support |
